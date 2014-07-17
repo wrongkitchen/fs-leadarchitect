@@ -15,7 +15,6 @@
     }
 }
 
-
 @mixin respond-to($media) {
     @if $media == mobile {
         @media screen and (max-width: $mobileMaxWidth) { 

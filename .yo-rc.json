@@ -1,0 +1,25 @@
+{
+  "generator-yeogurt": {
+    "config": {
+      "projectName": "leadarchitect",
+      "versionControl": "Git",
+      "structure": "Static Site",
+      "htmlOption": "None (Vanilla HTML)",
+      "jsOption": "RequireJS",
+      "testFramework": "Jasmine",
+      "cssOption": "SASS",
+      "useBourbon": true,
+      "cssFramework": "None",
+      "ieSupport": true,
+      "useGA": true,
+      "useFTP": true,
+      "jshint": false,
+      "useJsdoc": false,
+      "useKss": false,
+      "extras": [],
+      "html5Addons": [],
+      "jsTemplate": "React"
+    },
+    "version": "0.9.4"
+  }
+}

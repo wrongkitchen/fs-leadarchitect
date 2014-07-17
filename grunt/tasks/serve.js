@@ -12,7 +12,6 @@ module.exports = function(grunt) {
         grunt.task.run([
             'clean:server',
             'copy:server',
-            'jshint:test',
             'sass:server',
             'sass:serverPrint',
             'clean:temp',

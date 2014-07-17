@@ -32,7 +32,6 @@ module.exports = function(grunt) {
                 '<%= yeogurt.dev %>/bower_components/**/*.js'
             ],
             tasks: [
-                'newer:jshint',
                 'newer:copy:server'
             ]
         },

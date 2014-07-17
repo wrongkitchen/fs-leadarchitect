@@ -5,7 +5,6 @@
 
 module.exports = function(grunt) {
     grunt.registerTask('test', 'Peform tests on JavaScript', [
-        'jshint:test',
         
         'connect:test',
         'karma:unit',
