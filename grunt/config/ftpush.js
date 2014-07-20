@@ -12,7 +12,7 @@ module.exports = function(grunt) {
             simple: true,
             auth: {
                 host: '<%= secret.host %>',
-                port: 21,
+                port: 22,
                 authKey: 'key1'
             },
             src: '<%= yeogurt.dist %>',
