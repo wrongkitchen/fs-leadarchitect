@@ -29,13 +29,115 @@
 // [include:partials]
 // [/include]
 
-body{ font-family: 'BrownRegular', Arial, sans-serif; }
+body{ font-family: 'BrownRegular', Arial, sans-serif; width:100%; height:100%; }
+
+strong{ font-family: 'BrownBold', Arial, sans-serif; }
+
+.fw-banner{
+	position:absolute; background-position:top center; 
+	width:100%; height:100%; top:0; font-size:40px; color:#FFF;
+	min-height:600px;
+	.txt-container{ 
+		position:relative; height:100%; width:100%;
+		.txt{ 
+			position:absolute; top:50%; margin-top:-120px; width:100%; text-align: center; 
+			span{ max-width:500px; display:inline-block; }
+		}
+	}
+	.bottom-arrow{ width:100%; text-align:center; bottom:0; position:absolute; }
+	&.home{ background-image:url(../images/banner_home.png); }
+}
 
 #nav{ 
-    padding-top:50px;
-    .navButton, .logo{ float: left; }
-    .logo{ border-bottom:2px solid #4aab96; padding-bottom:5px; }
+    padding-top: 30px; position:absolute; z-index:10; text-align:center; width:100%;
+    .container{ max-width:700px; }
+	.navLeft{ float: left; width:40%; position:absolute; left:0; top:0; }
+	.navRight{ float: right; width:40%; position:absolute; right:0; top:0; }
+    .navButton{ color:#FFF; width:50%; font-family:'BrownBold', Arial, sans-serif; float: left; }
+    .navLeft, .navRight{
+    	padding-top: 32px;
+    	@include respond-to(mobile){ display:none; }
+    }
+    .langButton{ 
+    	position: absolute; right:40px; color:#FFF; top:60px; 
+    	@include respond-to(mobile){ display:none; }
+    }
+    .menu{ 
+    	position: absolute; right:20px; color:#FFF; top:50px; display:none; font-size: 40px;
+    	@include respond-to(mobile){ display:block; }
+    }
+    .logo{ border-bottom:2px solid #4aab96; padding-bottom:5px; text-align:center; display:inline-block; }
 }
-.container{ 
-    width:$tabletMaxWidth; margin:0 auto; 
+.midContent{ 
+	position:absolute; width:100%; height:100%;
+	.midContentRelative{ 
+		position: relative; width:100%; height:100%; min-height:600px;
+		.midContentAbsolute{ position:absolute; top:100%; width:100%; }
+	}
 }
+.container{ width:100%; max-width:$tabletMaxWidth; margin:0 auto; position:relative; }
+.section{
+	text-align: center; position:relative;
+	.title{ 
+		font-size:48px; color:$mainGreen; text-align: center; margin:50px 0; 
+		&.maxWidth{
+			span{ max-width: 600px; display: inline-block; }
+		}
+	}
+	.mountWidthImage{ width:80%; margin:0 auto; max-width:$tabletMaxWidth; }
+}
+.btn{
+	display:inline-block; text-transform: uppercase;
+	&.detail{ color:$mainGreen; font-size:12px; padding:5px 30px; border:1px solid $mainGreen; }
+}
+.owl{
+	.newsNode{ 
+		text-align: center; 
+		.newsDesc{ font-size:24px; color:#000; margin:20px 0; }
+	}
+	.pagination{
+		width:160px; margin: 30px auto 20px auto;
+		.page{ float:left; width:100px; line-height:25px; }
+		.pagin-left, .pagin-right{ float:left; font-size:30px; color:$mainGreen; }
+		.pagin-left{}
+	}
+}
+.social{
+	position:relative;
+	.icon{ 
+		width:100%; height:80px; background-color: $mainGreen; 
+		border-bottom:1px solid $secGreen; 
+		text-align: center; font-size: 35px;
+		color: #FFF; line-height: 90px; 
+	}
+	.icon-11b-left{ position:absolute; right:30px; top:25px; font-size:36px; color:#FFF; }
+}
+.shortFilm{ 
+	background-color:#e9e7e6; margin:30px 0px; 
+	.mountWidthImage{ width:100%; }
+}
+.footer{
+	margin:60px 0 0 0; background-color:$footerGrey; 
+	.fw-button{
+		border-bottom:2px solid $mainGreen; color:$mainGreen; text-align: center; position:relative; height:60px;
+		text-transform: uppercase; font-size:20px; line-height: 60px;
+		.icon-11b-left{ position:absolute; right:30px; top:25px; line-height: normal; }
+	}
+	.lower{
+		height:140px; background-image:url(../images/logo_footer.png); background-repeat: no-repeat; background-position:center 25px;
+		font-size:12px; color:$mainGreen; overflow: hidden;
+		@include respond-to(mobile){ height:auto; padding-top:140px; }
+		.leftFooter{ 
+			float:left; line-height: 205px;
+			span{ margin:0 10px; }
+		}
+		.rightFooter{ 
+			float:right; line-height: 205px; margin-right:10px; 
+			@include respond-to(mobile){ margin-bottom:20px; }
+		}
+		.leftFooter, .rightFooter{
+			@include respond-to(mobile){ float:none; line-height: normal; text-align: center; }	
+		}
+	}
+}
+
