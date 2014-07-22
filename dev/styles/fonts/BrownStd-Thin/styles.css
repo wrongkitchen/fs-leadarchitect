@@ -1,0 +1,12 @@
+@font-face {
+	font-family: 'BrownThin';
+	src: url('BrownStd-Thin.eot');
+	src: url('BrownStd-Thin.eot?#iefix') format('embedded-opentype'),
+		 url('BrownStd-Thin.woff') format('woff'),
+		 url('BrownStd-Thin.ttf') format('truetype'),
+		 url('BrownStd-Thin.svg#BrownThin') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+#fontsTesting{ font-family: 'BrownThin'; }
