@@ -4,7 +4,9 @@
 
 'use strict';
 require.config({
-    paths: {app: 'app'
+    paths: {
+    	app: 'app',
+
     }
 });
 
@@ -41,6 +43,16 @@ require(['app'], function (app) {
 				fwButton.addClass('active');
 				fwButton.children('.footerSlide').slideDown();
 			}
+		});
+
+
+		$(".owl>.owlContent").owlCarousel({
+			singleItem : true,
+			pagination : true,
+			autoHeight : true,
+			navigation : true,
+			navigationText : ['A', 'B']
+			// ,paginationNumbers : true
 		});
 	});
 });

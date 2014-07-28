@@ -349,6 +349,30 @@ strong{ font-family: 'BrownBold', Arial, sans-serif; }
 		text-align: center; 
 		.newsDesc{ font-size:24px; color:#000; margin:20px 0; }
 	}
+	.owl-controls{ 
+		position:relative; margin:20px 0; 
+		.owl-pagination{
+			.owl-page{
+				display:inline-block; width:20px; line-height:30px; text-align: center; 
+				span{ 
+					@extend .icon-nav;
+					color:#a8b7bd; font-family: 'leadarchitect';
+				}
+				&.active{ 
+					span { color:#e38025; }
+				}
+			}
+		}
+		.owl-buttons{
+			position:absolute; top:0; left:0; width:100%;
+			.owl-prev{ padding-right:10%; }
+			.owl-next{ padding-left:10%; }
+			.owl-prev, .owl-next{ 
+				font-family: 'leadarchitect'; font-size: 30px; color:$mainGreen;
+				display:inline-block;
+			}
+		}
+	}
 	.pagination{
 		width:160px; margin: 30px auto 20px auto;
 		.page{ 

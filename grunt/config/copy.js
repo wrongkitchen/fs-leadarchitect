@@ -13,7 +13,7 @@ module.exports = function(grunt) {
                 dest: '<%= yeogurt.server %>/',
                 src: [
                     'scripts/**/*.js',
-                    'bower_components/**/*.{js,map}',
+                    'bower_components/**/*.{js,map,css}',
                     'bower_components/**/*.{woff,otf,ttf,eot,svg}',
                     'images/**',
                     'styles/fonts/**/*.{woff,otf,ttf,eot,svg}',
