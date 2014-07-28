@@ -13,8 +13,7 @@ module.exports = function(grunt) {
                 dest: '<%= yeogurt.server %>/',
                 src: [
                     'scripts/**/*.js',
-                    'bower_components/**/*.{js,map,css}',
-                    'bower_components/**/*.{woff,otf,ttf,eot,svg}',
+                    'bower_components/**',
                     'images/**',
                     'styles/fonts/**/*.{woff,otf,ttf,eot,svg}',
                     '*.html'
@@ -27,10 +26,7 @@ module.exports = function(grunt) {
                 cwd: '<%= yeogurt.dev %>/',
                 dest: '<%= yeogurt.dist %>/',
                 src: [
-                    'bower_components/requirejs/require.js',
-                    'bower_components/modernizr/modernizr.js',
-                    'bower_components/**/*.{woff,otf,ttf,eot,svg}',
-                    'bower_components/jquery/jquery.min.*',
+                    'bower_components/**',
                     '*.html',
                     'scripts/modules/inline-*.*',
                     '!*.js',

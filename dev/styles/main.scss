@@ -168,7 +168,7 @@ strong{ font-family: 'BrownBold', Arial, sans-serif; }
 	&#contact{ 
 		padding:60px 0px 60px 0; 
 		.addresses	{ 
-			width:80%; margin:20px auto 0px auto;
+			width:80%; max-width: $tabletMaxWidth; margin:20px auto 0px auto;
 			.address{ float:left; width:33%; }
 			.contactLeft, .contactMiddle{ border-right:1px solid #bfbfbf; }
 		}
