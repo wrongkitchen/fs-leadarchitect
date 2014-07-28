@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 @font-face {
   font-family: 'BrownThin';
   src: url('fonts/BrownStd-Thin/BrownStd-Thin.eot');
@@ -33,7 +32,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 
 @font-face {
   font-family: "leadarchitect";
@@ -73,66 +71,48 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-chevron-down:before {
-  content: "a";
-}
-.icon-chevron-left:before {
-  content: "b";
-}
-.icon-chevron-right:before {
-  content: "c";
-}
-.icon-chevron-up:before {
-  content: "d";
-}
-.icon-10b-right:before {
-  content: "e";
-}
-.icon-11b-left:before {
-  content: "g";
-}
-.icon-08b-down:before {
-  content: "i";
-}
-.icon-09b-up:before {
-  content: "j";
-}
-.icon-left-open-mini:before {
-  content: "l";
-}
-.icon-right-open-mini:before {
-  content: "o";
-}
-.icon-up-open-mini:before {
-  content: "r";
-}
-.icon-down-open-mini:before {
-  content: "u";
-}
-.icon-down-open:before {
-  content: "f";
-}
-.icon-left-open:before {
-  content: "h";
-}
-.icon-right-open:before {
-  content: "k";
-}
-.icon-up-open:before {
-  content: "m";
-}
 .icon-linkedin-alt:before {
   content: "n";
 }
 .icon-twitter-alt:before {
   content: "p";
 }
-.icon-x:before {
-  content: "q";
-}
-.icon-x-1:before {
-  content: "s";
-}
 .icon-menu:before {
   content: "t";
+}
+.icon-facebook:before {
+  content: "v";
+}
+.icon-linkedin:before {
+  content: "w";
+}
+.icon-youtube-alt:before {
+  content: "x";
+}
+.icon-pinterest-circled:before {
+  content: "y";
+}
+.icon-sina-weibo:before {
+  content: "z";
+}
+.icon-10b-right:before {
+  content: "A";
+}
+.icon-11b-left:before {
+  content: "B";
+}
+.icon-back-to-top:before {
+  content: "C";
+}
+.icon-x-1:before {
+  content: "D";
+}
+.icon-nav:before {
+  content: "E";
+}
+.icon-arrow-up:before {
+  content: "a";
+}
+.icon-arrow-down:before {
+  content: "b";
 }
