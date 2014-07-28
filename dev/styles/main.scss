@@ -334,7 +334,7 @@ strong{ font-family: 'BrownBold', Arial, sans-serif; }
 				.pagination{ 
 					width:100%; margin-bottom:40px;
 					.pagin-left, .pagin-right{ width:10%; }
-					.page{ width:80%; color:$mainGreen; }
+					.page{ width:80%; color:$mainGreen; line-height: normal; }
 				}
 			}
 		}
