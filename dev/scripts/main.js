@@ -16,6 +16,7 @@ require(['app'], function (app) {
 		$("#termsCaller").on('click', function(){
 			if($('.terms').length){
 				$('.terms').slideDown();
+				$(window).scrollTo($('.terms'), 800);
 			}
 		});
 		$('.terms>.close').on('click', function(){
@@ -23,7 +24,6 @@ require(['app'], function (app) {
 				$('.terms').slideUp();
 			}
 		});
-
 
 		$('.about-node>.about-title').on('click', function(){
 			var slide = $(this).parent().children('.about-slide');
@@ -45,7 +45,6 @@ require(['app'], function (app) {
 			}
 		});
 
-
 		$(".owl>.owlContent").owlCarousel({
 			singleItem : true,
 			pagination : true,
@@ -53,6 +52,30 @@ require(['app'], function (app) {
 			navigation : true,
 			navigationText : ['A', 'B']
 			// ,paginationNumbers : true
+		});
+
+		$('.fw-banner>.bottom-arrow').on('click', function(){
+			$(window).scrollTo($(window).height(), 1000);
+		});
+
+		$('.social>.icon').on('click', function(){
+			var content = $(this).parent().children('.socialContent');
+			if(content.hasClass('active')){
+				content.removeClass('active');
+				content.slideUp();
+			} else {
+				content.addClass('active');
+				content.slideDown();
+			}
+		});
+
+		$('.menu').on('click', function(){
+			var nav = $('#nav');
+			if(nav.hasClass('active')){
+				nav.removeClass('active');
+			} else {
+				nav.addClass('active');
+			}
 		});
 	});
 });

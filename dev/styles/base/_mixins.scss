@@ -37,3 +37,22 @@
         }
     }
 }
+
+@mixin respond-fonts($fontsize){
+    font-size: $fontsize;
+    @if $fontsize == 48px{
+        @include respond-to(mobile){
+            font-size: 40px;
+        }
+    } 
+    @else if $fontsize == 40px{
+        @include respond-to(mobile){
+            font-size: 32px;
+        }
+    }
+    @else if $fontsize == 24px{
+        @include respond-to(mobile){
+            font-size: 18px;
+        }
+    }
+}

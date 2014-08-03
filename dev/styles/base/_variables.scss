@@ -9,3 +9,11 @@ $footerGrey: #f2f0ef;
 
 $tabletMaxWidth: 1200px - 40px; //1020px - 40px; //980px
 $mobileMaxWidth: 840px - 40px; //600px
+
+.animation{
+    -webkit-transition: all .5s linear;
+    -moz-transition: all .5s linear;
+    -ms-transition: all .5s linear;
+    -o-transition: all .5s linear;
+    transition: all .5s linear;
+}
