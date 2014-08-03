@@ -142,7 +142,7 @@ iframe[id^='twitter-widget-']{ width:100% !important; }
 	}
 }
 .fw-banner{
-	position:absolute; background-position:top center; 
+	position:fixed; background-position:top center; 
 	width:100%; height:100%; top:0; @include respond-fonts(48px); color:#FFF;
 	min-height:600px;
 	.txt-container{ 
@@ -156,7 +156,8 @@ iframe[id^='twitter-widget-']{ width:100% !important; }
 }
 
 #nav{ 
-    padding: 30px 0; position:absolute; z-index:10; text-align:center; width:100%;
+    padding: 30px 0; position:fixed; z-index:10;
+    text-align:center; width:100%; background-color:transparent;
     .container{ max-width:700px; }
 	.navLeft{ float: left; width:40%; position:absolute; left:0; top:0; }
 	.navRight{ float: right; width:40%; position:absolute; right:0; top:0; }
@@ -178,12 +179,15 @@ iframe[id^='twitter-widget-']{ width:100% !important; }
     	@include respond-to(mobile){ display:block; }
     }
     .logo{ padding-bottom:5px; text-align:center; display:inline-block; }
+    &.active{ background-color:$mainGreen; }
 }
 .midContent{ 
 	position:absolute; width:100%; height:100%;
 	.midContentRelative{ 
 		position: relative; width:100%; height:100%; min-height:600px;
-		.midContentAbsolute{ position:absolute; top:100%; width:100%; }
+		.midContentAbsolute{ 
+			position:absolute; top:100%; width:100%; background-color:#FFF;
+		}
 	}
 }
 .container{ width:100%; max-width:$tabletMaxWidth; margin:0 auto; position:relative; }

@@ -93,6 +93,20 @@ require(['app'], function (app) {
 				parent.removeClass('active');
 				greyBlock.slideUp();
 		});
+
+		var checkNavStatus = function(){
+			var scrollTop = $(window).scrollTop() || document.documentElement.scrollTop;
+			var addClass = ($(window).height() - scrollTop) < ($('#nav').outerHeight() * 1.1);
+			if(addClass)
+				$('#nav').addClass('active');
+			else
+				$('#nav').removeClass('active');
+		};
+		checkNavStatus();
+
+		$(window).scroll(function(){
+			checkNavStatus();
+		});
 	});
 });
 
