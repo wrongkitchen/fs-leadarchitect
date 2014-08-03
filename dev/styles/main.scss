@@ -182,7 +182,8 @@ iframe[id^='twitter-widget-']{ width:100% !important; }
     	&:hover span, &.active span{ border-bottom:2px solid #e38025; padding-bottom:5px; }
     }
     .navLeft, .navRight{
-    	padding-top: 32px;
+    	padding-top: 32px; 
+    	a{ text-decoration: none; }
     	@include respond-to(mobile){ display:none; }
     }
     .langButton{ 
@@ -463,7 +464,7 @@ iframe[id^='twitter-widget-']{ width:100% !important; }
 					top: 0; left: 0; background-color: #FFF; display:none;
 				}
 				.about-slide{ 
-					position:relative; display:block;
+					position:relative;
 					.about-slide-row{ 
 						a{ text-decoration: none; }
 						margin-bottom:10px; text-align: left; 
