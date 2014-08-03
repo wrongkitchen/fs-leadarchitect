@@ -26,10 +26,13 @@ require(['app'], function (app) {
 		});
 
 		$('.about-node>.about-title').on('click', function(){
-			var slide = $(this).parent().children('.about-slide');
-			if(slide.css('display') == 'block'){
+			var parent = $(this).parent();
+			var slide = parent.children('.about-slide');
+			if(parent.hasClass('active')){
+				parent.removeClass('active');
 				slide.slideUp();
 			} else {
+				parent.addClass('active');
 				slide.slideDown();
 			}
 		});
@@ -59,12 +62,13 @@ require(['app'], function (app) {
 		});
 
 		$('.social>.icon').on('click', function(){
+			var parent = $(this).parent();
 			var content = $(this).parent().children('.socialContent');
-			if(content.hasClass('active')){
-				content.removeClass('active');
+			if(parent.hasClass('active')){
+				parent.removeClass('active');
 				content.slideUp();
 			} else {
-				content.addClass('active');
+				parent.addClass('active');
 				content.slideDown();
 			}
 		});
@@ -76,6 +80,18 @@ require(['app'], function (app) {
 			} else {
 				nav.addClass('active');
 			}
+		});
+
+		$('.about-desc>.btnWrapper.more').on('click', function(){
+			var parent = $(this).parent();
+				parent.children('.greyBlock').slideDown();
+				parent.addClass('active');
+		});
+		$('.about-desc>.greyBlock>.btnWrapper.less').on('click', function(){
+			var parent = $(this).parent().parent();
+			var greyBlock = $(this).parent();
+				parent.removeClass('active');
+				greyBlock.slideUp();
 		});
 	});
 });

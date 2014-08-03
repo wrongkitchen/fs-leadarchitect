@@ -42,12 +42,22 @@
     font-size: $fontsize;
     @if $fontsize == 48px{
         @include respond-to(mobile){
-            font-size: 40px;
+            font-size: 36px;
         }
     } 
     @else if $fontsize == 40px{
         @include respond-to(mobile){
             font-size: 32px;
+        }
+    }
+    @else if $fontsize == 36px{
+        @include respond-to(mobile){
+            font-size: 28px;
+        }
+    }
+    @else if $fontsize == 28px{
+        @include respond-to(mobile){
+            font-size: 22px;
         }
     }
     @else if $fontsize == 24px{
