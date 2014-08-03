@@ -37,12 +37,8 @@ iframe[id^='twitter-widget-']{ width:100% !important; }
 
 .mobile{ display:none; }
 @include respond-to(mobile){ 
-	.mobile{ 
-		display:block; 
-	}
-	.desktop{ 
-		display:none; 
-	}
+	.mobile{ display:block; }
+	.desktop{ display:none; }
 }
 .wrapper{
 	&.home{
@@ -140,11 +136,30 @@ iframe[id^='twitter-widget-']{ width:100% !important; }
 		}
 		#nav{ background:$mainGreen; }
 	}
+	&.mobileShow{
+		#nav{
+	    	@include respond-to(mobile){
+		    	background-color:$mainGreen; height:320px;
+		    	.navLeft, .navRight{ display:block; } 
+		    	&.active{ background:transparent; }
+				.logo{ position:absolute; top:0; left:50%; margin-left:-43px; }
+				.navLeft, .navRight{ 
+					float:none; width:100%; position:relative; padding:0;
+				}
+				.navLeft{ padding-top:100px; } 
+				.navButton{ float:none; width:100%; margin-bottom:40px; }
+			}
+		}
+		.fw-banner, .midContent{ top:380px; } 
+	}
 }
 .fw-banner{
 	position:fixed; background-position:top center; 
-	width:100%; height:100%; top:0; @include respond-fonts(48px); color:#FFF;
-	min-height:600px;
+	width:100%; height:100%; top:0; min-height:600px;
+	@include respond-fonts(48px); color:#FFF;
+	@include respond-to(mobile){
+		position:absolute;
+	}
 	.txt-container{ 
 		position:relative; height:100%; width:100%;
 		.txt{ 
@@ -156,7 +171,7 @@ iframe[id^='twitter-widget-']{ width:100% !important; }
 }
 
 #nav{ 
-    padding: 30px 0; position:fixed; z-index:10;
+    padding: 30px 0; position:fixed; z-index:100;
     text-align:center; width:100%; background-color:transparent;
     .container{ max-width:700px; }
 	.navLeft{ float: left; width:40%; position:absolute; left:0; top:0; }
@@ -180,6 +195,10 @@ iframe[id^='twitter-widget-']{ width:100% !important; }
     }
     .logo{ padding-bottom:5px; text-align:center; display:inline-block; }
     &.active{ background-color:$mainGreen; }
+    @include respond-to(mobile)
+    {
+    	height: 60px; position:absolute;
+    }
 }
 .midContent{ 
 	position:absolute; width:100%; height:100%;
@@ -259,7 +278,10 @@ iframe[id^='twitter-widget-']{ width:100% !important; }
 	&#workSubPage{
 		.gallery{
 			margin:50px 0 200px 0;
-			.galleryRow{ width:80%; margin:5px auto; }
+			.galleryRow{ 
+				width:80%; margin:5px auto; 
+				a{ color:#FFF; text-decoration: none; }
+			}
 			.galleryLeft{ float:left; width:32%; margin-right:1%; }
 			.galleryMiddle{ float:left; width:32%; margin-right:1%; }
 			.galleryRight{ float:left; width:32%; }
@@ -269,15 +291,34 @@ iframe[id^='twitter-widget-']{ width:100% !important; }
 				}
 			}
 			.galleryNode{	
+				position:relative;
 				img{ width:100%; }
-				.active{ 
-					display:none; 
+				.active{ display:none; }
+				.galleryNodeTitle{ 
+					position:absolute; z-index:10; top:0; text-align: center;
+					width:100%; height:100%; @extend .animation;
+					opacity: 0;
+					@include respond-to(mobile){ 
+						position:static; margin-bottom:40px; 
+						opacity: 1; color:$mainGreen;
+					}
+					.name{ 
+						padding-top:50px; 
+						@include respond-fonts(28px); 
+						@include respond-to(mobile){ padding-top:10px; }; 
+					}
+					.location{  }
 				}
 				@include respond-to(mobile){
 					.active{ display:block; }
 					.normal{ display:none; }
 				}
 				&:hover{
+					.galleryNodeTitle{ 
+						background-image:url(../images/op-e38025-40.png); 
+						opacity:1; 
+						@include respond-to(mobile){ background:transparent;  }
+					}
 					.active{ display:block; }
 					.normal{ display:none; }
 				}
@@ -416,10 +457,51 @@ iframe[id^='twitter-widget-']{ width:100% !important; }
 				.owl{ padding-bottom:30px; }
 			}
 			&#aboutPeople{
+				.peopleGallery{ padding-bottom:100px; }
+				#aboutPeopleOwl{
+					position: absolute; width: 100%; height: 100%;
+					top: 0; left: 0; background-color: #FFF; display:none;
+				}
+				.about-slide{ 
+					position:relative; display:block;
+					.about-slide-row{ 
+						a{ text-decoration: none; }
+						margin-bottom:10px; text-align: left; 
+					}
+					.about-slide-people{ 
+						width:15%; display:inline-block; margin-right:1%; position:relative;
+						.name{ 
+							position:absolute; top:0; left:0; width:100%; height:100%; 
+							text-align: center; color:#FFF; opacity: 0; @extend .animation;
+							background-image:url(../images/op-e38025-40.png); margin-bottom:40px;
+							span{ position: relative; top: 50%; margin-top: -25%; display: block; }
+							@include respond-to(mobile){ 
+								opacity: 1; background-image:none;
+								position:static; color:$mainGreen;
+								span{ top:auto; margin:0; }
+							}
+						}
+						&:hover{
+							.name{ opacity: 1; }
+						}
+						@include respond-to(mobile){
+							display:block; margin:0 auto; text-align: center;
+							width:80%;
+						}
+						&.end{ 
+							margin:0; @include respond-to(mobile){ margin:0 auto; }
+						}
+						img{ width:100%; } 
+					}
+				}
 				.close{ 
-					position:absolute; top:100px; width:100%; 
-					font-size:30px; color:#8a8888; display:none;
+					position:absolute; top:-20px; width:100%; cursor:pointer;
+					font-size:30px; color:#8a8888; z-index:10; 
 					.icon-x-1{ width:10%; text-align: center; }
+				}
+				.about-slide-title{ 
+					width:60%; margin:40px auto; @include respond-fonts(24px); 
+					color:$mainGreen;
 				}
 				.aboutLeft{ 
 					float:left; width:40%; 
@@ -432,6 +514,16 @@ iframe[id^='twitter-widget-']{ width:100% !important; }
 						padding-top:20px;
 						a{ color:#000; }
 					}
+				}
+				@include respond-to(mobile){ 
+					.aboutLeft{
+						text-align: center;
+						img{ margin:0; }
+					}
+					.aboutRight{ 
+						.txt{ padding:40px 0 0 0; margin:40px 0; } 
+					}
+					.aboutLeft, .aboutRight{ float:none; width:80%; margin:0 auto; padding:0; }
 				}
 				.pagination{ 
 					width:100%; margin-bottom:40px;

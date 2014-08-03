@@ -74,11 +74,11 @@ require(['app'], function (app) {
 		});
 
 		$('.menu').on('click', function(){
-			var nav = $('#nav');
-			if(nav.hasClass('active')){
-				nav.removeClass('active');
+			var wrapper = $('.wrapper');
+			if(wrapper.hasClass('mobileShow')){
+				wrapper.removeClass('mobileShow');
 			} else {
-				nav.addClass('active');
+				wrapper.addClass('mobileShow');
 			}
 		});
 
@@ -94,6 +94,10 @@ require(['app'], function (app) {
 				greyBlock.slideUp();
 		});
 
+		$('#aboutPeopleOwlClose').on('click', function(){
+			$('#aboutPeopleOwl').fadeOut();
+		});
+
 		var checkNavStatus = function(){
 			var scrollTop = $(window).scrollTop() || document.documentElement.scrollTop;
 			var addClass = ($(window).height() - scrollTop) < ($('#nav').outerHeight() * 1.1);
@@ -107,6 +111,10 @@ require(['app'], function (app) {
 		$(window).scroll(function(){
 			checkNavStatus();
 		});
+
+		window.showPeopleDetail = function(pIndex){
+			$('#aboutPeopleOwl').fadeIn();
+		};
 	});
 });
 
