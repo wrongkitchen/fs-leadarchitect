@@ -1,36 +1,50 @@
 [
 	{ 
 		"href" : "",
-		"thumbnail_normal" : "images/work/projects/work-01.png",
-		"thumbnail_active" : "images/work/projects/work-01-active.png",
+		"thumbnail_normal" : "images/work/projects/present/ITC-Shanghai.jpg",
+		"thumbnail_active" : "images/work/projects/present/ITC-Shanghai.jpg",
 		"name" : "Lorem Ipsum",
 		"location" : "Hong Kong"
 	},
 	{ 
 		"href" : "",
-		"thumbnail_normal" : "images/work/projects/work-02.png",
-		"thumbnail_active" : "images/work/projects/work-02-active.png",
+		"thumbnail_normal" : "images/work/projects/present/Osaka-Waterfront.jpg",
+		"thumbnail_active" : "images/work/projects/present/Osaka-Waterfront.jpg",
 		"name" : "Lorem Ipsum",
 		"location" : "Hong Kong"
 	},
 	{ 
 		"href" : "",
-		"thumbnail_normal" : "images/work/projects/work-03.png",
-		"thumbnail_active" : "images/work/projects/work-03-active.png",
+		"thumbnail_normal" : "images/work/projects/present/PCP-Beijing.jpg",
+		"thumbnail_active" : "images/work/projects/present/PCP-Beijing.jpg",
 		"name" : "Lorem Ipsum",
 		"location" : "Hong Kong"
 	},
 	{ 
 		"href" : "",
-		"thumbnail_normal" : "images/work/projects/work-04.png",
-		"thumbnail_active" : "images/work/projects/work-04-active.png",
+		"thumbnail_normal" : "images/work/projects/present/Penang-Sentral.jpg",
+		"thumbnail_active" : "images/work/projects/present/Penang-Sentral.jpg",
 		"name" : "Lorem Ipsum",
 		"location" : "Hong Kong"
 	},
 	{ 
 		"href" : "",
-		"thumbnail_normal" : "images/work/projects/work-05.png",
-		"thumbnail_active" : "images/work/projects/work-05-active.png",
+		"thumbnail_normal" : "images/work/projects/present/R&F-Tongzhou.jpg",
+		"thumbnail_active" : "images/work/projects/present/R&F-Tongzhou.jpg",
+		"name" : "Lorem Ipsum",
+		"location" : "Hong Kong"
+	},
+	{ 
+		"href" : "",
+		"thumbnail_normal" : "images/work/projects/present/UEM-Riverwalk.jpg",
+		"thumbnail_active" : "images/work/projects/present/UEM-Riverwalk.jpg",
+		"name" : "Lorem Ipsum",
+		"location" : "Hong Kong"
+	},
+	{ 
+		"href" : "",
+		"thumbnail_normal" : "images/work/projects/present/Zhuhai-Ribbon.jpg",
+		"thumbnail_active" : "images/work/projects/present/Zhuhai-Ribbon.jpg",
 		"name" : "Lorem Ipsum",
 		"location" : "Hong Kong"
 	}

@@ -1,36 +1,50 @@
 [
 	{ 
 		"href" : "projects/works-project.html",
-		"thumbnail_normal" : "images/work/projects/work-01.png",
-		"thumbnail_active" : "images/work/projects/work-01-active.png",
+		"thumbnail_normal" : "images/work/projects/past/1234-Mall.jpg",
+		"thumbnail_active" : "images/work/projects/past/1234-Mall.jpg",
 		"name" : "Lorem Ipsum",
 		"location" : "Hong Kong"
 	},
 	{ 
 		"href" : "",
-		"thumbnail_normal" : "images/work/projects/work-02.png",
-		"thumbnail_active" : "images/work/projects/work-02-active.png",
+		"thumbnail_normal" : "images/work/projects/past/889-Shanghai.jpg",
+		"thumbnail_active" : "images/work/projects/past/889-Shanghai.jpg",
 		"name" : "Lorem Ipsum",
 		"location" : "Hong Kong"
 	},
 	{ 
 		"href" : "",
-		"thumbnail_normal" : "images/work/projects/work-03.png",
-		"thumbnail_active" : "images/work/projects/work-03-active.png",
+		"thumbnail_normal" : "images/work/projects/past/Elements.jpg",
+		"thumbnail_active" : "images/work/projects/past/Elements.jpg",
 		"name" : "Lorem Ipsum",
 		"location" : "Hong Kong"
 	},
 	{ 
 		"href" : "",
-		"thumbnail_normal" : "images/work/projects/work-04.png",
-		"thumbnail_active" : "images/work/projects/work-04-active.png",
+		"thumbnail_normal" : "images/work/projects/past/Hysan-Place.jpg",
+		"thumbnail_active" : "images/work/projects/past/Hysan-Place.jpg",
 		"name" : "Lorem Ipsum",
 		"location" : "Hong Kong"
 	},
 	{ 
 		"href" : "",
-		"thumbnail_normal" : "images/work/projects/work-05.png",
-		"thumbnail_active" : "images/work/projects/work-05-active.png",
+		"thumbnail_normal" : "images/work/projects/past/IAPM.jpg",
+		"thumbnail_active" : "images/work/projects/past/IAPM.jpg",
+		"name" : "Lorem Ipsum",
+		"location" : "Hong Kong"
+	},
+	{ 
+		"href" : "",
+		"thumbnail_normal" : "images/work/projects/past/IFC-Pudong.jpg",
+		"thumbnail_active" : "images/work/projects/past/IFC-Pudong.jpg",
+		"name" : "Lorem Ipsum",
+		"location" : "Hong Kong"
+	},
+	{ 
+		"href" : "",
+		"thumbnail_normal" : "images/work/projects/past/OakBay-Dreamport.jpg",
+		"thumbnail_active" : "images/work/projects/past/OakBay-Dreamport.jpg",
 		"name" : "Lorem Ipsum",
 		"location" : "Hong Kong"
 	}
