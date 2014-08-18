@@ -12,6 +12,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link href="//www.google-analytics.com" rel="dns-prefetch">
 <link rel="stylesheet" href="bower_components/owlcarousel/owl-carousel/owl.carousel.css" media="screen">
+<link rel="stylesheet" href="bower_components/magnific-popup/dist/magnific-popup.css" media="screen">
 <link rel="stylesheet" href="styles/main.css" media="screen">
 </head>
 <body>
@@ -54,18 +55,20 @@
 
 				<div id="works" class="section">
 					<div class="container">
-						<a href="works-category.html">
+						<a href="works-category.html?type=past">
 							<div class="worksLeft">
 								<div class="title">Past work</div>
-								<img class="mountWidthImage" src="images/work/past-work.png" alt="">
+								<div class="border"></div>
 								<div class="worksDesc">A selection of projects and experience prior to the formation of Lead</div>
+								<div class="btn detail">SEE PAST WORK</div>
 							</div>
 						</a>
 						<a href="works-category.html">
 							<div class="worksRight">
 								<div class="title">Present work</div>
-								<img class="mountWidthImage" src="images/work/present-work.png" alt="">
+								<div class="border"></div>
 								<div class="worksDesc">Current Lead projects, in progress and recent appointments</div>
+								<div class="btn detail">SEE PRESENT WORK</div>
 							</div>
 						</a>
 						<div class="clearfix"></div>
@@ -190,10 +193,11 @@
 <!-- build:js({dev,.tmp}) scripts/vendor.js -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/owlcarousel/owl-carousel/owl.carousel.min.js"></script>
+<script src="bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
 <script src="bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
 <!-- endbuild -->
 
-<script data-main="scripts/main", src="bower_components/requirejs/require.js"></script>
+<script src="scripts/main.js"></script>
 
 </body>
 </html>

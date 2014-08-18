@@ -12,6 +12,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link href="//www.google-analytics.com" rel="dns-prefetch">
 <link rel="stylesheet" href="bower_components/owlcarousel/owl-carousel/owl.carousel.css" media="screen">
+<link rel="stylesheet" href="bower_components/magnific-popup/dist/magnific-popup.css" media="screen">
 <link rel="stylesheet" href="styles/main.css" media="screen">
 </head>
 <body>
@@ -37,8 +38,8 @@
 	<div class="fw-banner">
 		<a href="news.html"><div class="icon icon-x-1"></div></a>
 		<div class="txt-container">
-			<div class="title">Past Projects</div>
-			<div class="subTitle">A selection of projects and experience prior to the formation of Lead</div>
+			<div id="workTypeTitle" class="title"></div>
+			<div id="workTypeDesc" class="subTitle"></div>
 		</div>
 		<div class="bottom-arrow"><i class="icon-arrow-down"></i></div>
 	</div>
@@ -49,163 +50,7 @@
 
 				<div class="section" id="workSubPage">
 				
-					<div class="gallery">
-						<div class="galleryRow">
-							<a href="works-project.html">
-								<div class="galleryNode galleryLeft">
-									<img src="images/work/projects/work-01.png" class="normal" alt="">
-									<img src="images/work/projects/work-01-active.png" class="active" alt="">
-									<div class="galleryNodeTitle">
-										<div class="name">Lorem Ipsum</div>
-										<div class="location">Hong Kong</div>
-									</div>
-								</div>
-							</a>
-							<a href="works-project.html">
-								<div class="galleryNode galleryMiddle">
-									<img src="images/work/projects/work-02.png" class="normal" alt="">
-									<img src="images/work/projects/work-02-active.png" class="active" alt="">
-									<div class="galleryNodeTitle">
-										<div class="name">Lorem Ipsum</div>
-										<div class="location">Hong Kong</div>
-									</div>
-								</div>
-							</a>
-							<a href="works-project.html">
-								<div class="galleryNode galleryRight">
-									<img src="images/work/projects/work-03.png" class="normal" alt="">
-									<img src="images/work/projects/work-03-active.png" class="active" alt="">
-									<div class="galleryNodeTitle">
-										<div class="name">Lorem Ipsum</div>
-										<div class="location">Hong Kong</div>
-									</div>
-								</div>
-							</a>
-							<div class="clearfix"></div>
-						</div>
-						<div class="galleryRow">
-							<a href="works-project.html">
-								<div class="galleryNode galleryLeft">
-									<img src="images/work/projects/work-04.png" class="normal" alt="">
-									<img src="images/work/projects/work-04-active.png" class="active" alt="">
-									<div class="galleryNodeTitle">
-										<div class="name">Lorem Ipsum</div>
-										<div class="location">Hong Kong</div>
-									</div>
-								</div>
-							</a>
-							<a href="works-project.html">
-								<div class="galleryNode galleryMiddle">
-									<img src="images/work/projects/work-05.png" class="normal" alt="">
-									<img src="images/work/projects/work-05-active.png" class="active" alt="">
-									<div class="galleryNodeTitle">
-										<div class="name">Lorem Ipsum</div>
-										<div class="location">Hong Kong</div>
-									</div>
-								</div>
-							</a>
-							<a href="works-project.html">
-								<div class="galleryNode galleryRight">
-									<img src="images/work/projects/work-06.png" class="normal" alt="">
-									<img src="images/work/projects/work-06-active.png" class="active" alt="">
-									<div class="galleryNodeTitle">
-										<div class="name">Lorem Ipsum</div>
-										<div class="location">Hong Kong</div>
-									</div>
-								</div>
-							</a>
-							<div class="clearfix"></div>
-						</div>
-						<div class="galleryRow">
-							<a href="works-project.html">
-								<div class="galleryNode galleryLeft">
-									<img src="images/work/projects/work-07.png" class="normal" alt="">
-									<img src="images/work/projects/work-07-active.png" class="active" alt="">
-									<div class="galleryNodeTitle">
-										<div class="name">Lorem Ipsum</div>
-										<div class="location">Hong Kong</div>
-									</div>
-								</div>
-							</a>
-							<a href="works-project.html">
-								<div class="galleryNode galleryMiddle">
-									<img src="images/work/projects/work-08.png" class="normal" alt="">
-									<img src="images/work/projects/work-08-active.png" class="active" alt="">
-									<div class="galleryNodeTitle">
-										<div class="name">Lorem Ipsum</div>
-										<div class="location">Hong Kong</div>
-									</div>
-								</div>
-							</a>
-							<a href="works-project.html">
-								<div class="galleryNode galleryRight">
-									<img src="images/work/projects/work-09.png" class="normal" alt="">
-									<img src="images/work/projects/work-09-active.png" class="active" alt="">
-									<div class="galleryNodeTitle">
-										<div class="name">Lorem Ipsum</div>
-										<div class="location">Hong Kong</div>
-									</div>
-								</div>
-							</a>
-							<div class="clearfix"></div>
-						</div>
-						<div class="galleryRow">
-							<a href="works-project.html">
-								<div class="galleryNode galleryLeft">
-									<img src="images/work/projects/work-10.png" class="normal" alt="">
-									<img src="images/work/projects/work-10-active.png" class="active" alt="">
-									<div class="galleryNodeTitle">
-										<div class="name">Lorem Ipsum</div>
-										<div class="location">Hong Kong</div>
-									</div>
-								</div>
-							</a>
-							<a href="works-project.html">
-								<div class="galleryNode galleryMiddle">
-									<img src="images/work/projects/work-11.png" class="normal" alt="">
-									<img src="images/work/projects/work-11-active.png" class="active" alt="">
-									<div class="galleryNodeTitle">
-										<div class="name">Lorem Ipsum</div>
-										<div class="location">Hong Kong</div>
-									</div>
-								</div>
-							</a>
-							<a href="works-project.html">
-								<div class="galleryNode galleryRight">
-									<img src="images/work/projects/work-12.png" class="normal" alt="">
-									<img src="images/work/projects/work-12-active.png" class="active" alt="">
-									<div class="galleryNodeTitle">
-										<div class="name">Lorem Ipsum</div>
-										<div class="location">Hong Kong</div>
-									</div>
-								</div>
-							</a>
-							<div class="clearfix"></div>
-						</div>
-						<div class="galleryRow">
-							<a href="works-project.html">
-								<div class="galleryNode galleryLeft">
-									<img src="images/work/projects/work-13.png" class="normal" alt="">
-									<img src="images/work/projects/work-13-active.png" class="active" alt="">
-									<div class="galleryNodeTitle">
-										<div class="name">Lorem Ipsum</div>
-										<div class="location">Hong Kong</div>
-									</div>
-								</div>
-							</a>
-							<a href="works-project.html">
-								<div class="galleryNode galleryMiddle">
-									<img src="images/work/projects/work-14.png" class="normal" alt="">
-									<img src="images/work/projects/work-14-active.png" class="active" alt="">
-									<div class="galleryNodeTitle">
-										<div class="name">Lorem Ipsum</div>
-										<div class="location">Hong Kong</div>
-									</div>
-								</div>
-							</a>
-							<div class="clearfix"></div>
-						</div>
-					</div>
+					<div class="gallery"></div>
 
 				</div>
 
@@ -289,6 +134,21 @@
 </div>
 
 
+<script id="workListNode" type="text/x-handlebars-template">
+	<a href="{{{ href }}}">
+		<div class="galleryNode {{{ className }}}">
+			<img src="{{{ thumbnail_normal }}}" class="normal" alt="">
+			<img src="{{{ thumbnail_active }}}" class="active" alt="">
+			<div class="galleryNodeTitle">
+				<div class="name">{{{ name }}}</div>
+				<div class="location">{{{ location }}}</div>
+			</div>
+		</div>
+	</a>
+</script>
+
+
+
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 <script>
     (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
@@ -302,10 +162,13 @@
 <!-- build:js({dev,.tmp}) scripts/vendor.js -->
 <script src="bower_components/jquery/dist/jquery.js"></script>
 <script src="bower_components/owlcarousel/owl-carousel/owl.carousel.min.js"></script>
+<script src="scripts/handlebars-v1.3.0.js"></script>
+<script src="bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
 <script src="bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
 <!-- endbuild -->
 
-<script data-main="scripts/main", src="bower_components/requirejs/require.js"></script>
+<script src="scripts/main.js"></script>
+<script src="scripts/works-list.js"></script>
 
 </body>
 </html>

@@ -15,6 +15,7 @@ module.exports = function(grunt) {
                     'scripts/**/*.js',
                     'bower_components/**',
                     'images/**',
+                    'json/**',
                     'styles/fonts/**/*.{woff,otf,ttf,eot,svg}',
                     '*.html'
                 ]
@@ -33,6 +34,7 @@ module.exports = function(grunt) {
                     '*.{ico,png,txt,html}',
                     '.htaccess',
                     'images/**/*.{webp}',
+                    'json/**',
                     'styles/fonts/**/*.{woff,otf,ttf,eot,svg}'
                 ]
             }]

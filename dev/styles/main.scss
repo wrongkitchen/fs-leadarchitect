@@ -40,14 +40,19 @@ iframe[id^='twitter-widget-']{ width:100% !important; }
 	.mobile{ display:block; }
 	.desktop{ display:none; }
 }
+$homeColor : #F68F1F;
+$aboutColor : #E1E319;
+$contactColor : #D41C57;
+$workColor : #e38025;
+
 .wrapper{
 	&.home{
 		.fw-banner{ background-image:url(../images/banner_home.png); }
 		#nav{
-			.logo{ border-bottom:2px solid #4aab96; }		
-			.navButton:hover span, .navButton.active span{ border-bottom:2px solid #4aab96; }
+			.logo{ border-bottom:2px solid $homeColor; }		
+			.navButton:hover span, .navButton.active span{ border-bottom:2px solid $homeColor; }
 		}
-		.owl .owl-controls .owl-pagination .owl-page.active span{ color:#4aab96; }
+		.owl .owl-controls .owl-pagination .owl-page.active span{ color:$homeColor; }
 		.footer{
 			.lower{ background-image:url(../images/logo_footer_home.png); }
 		}
@@ -55,10 +60,10 @@ iframe[id^='twitter-widget-']{ width:100% !important; }
 	&.contact{
 		.fw-banner{ background-image:url(../images/banner_contact.png); }
 		#nav{
-			.logo{ border-bottom:2px solid #8a57ac; }		
-			.navButton:hover span, .navButton.active span{ border-bottom:2px solid #8a57ac; }
+			.logo{ border-bottom:2px solid $contactColor; }		
+			.navButton:hover span, .navButton.active span{ border-bottom:2px solid $contactColor; }
 		}
-		.owl .owl-controls .owl-pagination .owl-page.active span{ color:#8a57ac; }
+		.owl .owl-controls .owl-pagination .owl-page.active span{ color:$contactColor; }
 		.footer{
 			.lower{ background-image:url(../images/logo_footer_contact.png); }
 		}
@@ -66,10 +71,10 @@ iframe[id^='twitter-widget-']{ width:100% !important; }
 	&.work{
 		.fw-banner{ background-image:url(../images/banner_work.png); }	
 		#nav{
-			.logo{ border-bottom:2px solid #e38025; }
-			.navButton:hover span, .navButton.active span{ border-bottom:2px solid #e38025; }
+			.logo{ border-bottom:2px solid $workColor; }
+			.navButton:hover span, .navButton.active span{ border-bottom:2px solid $workColor; }
 		}
-		.owl .owl-controls .owl-pagination .owl-page.active span{ color:#e38025; }
+		.owl .owl-controls .owl-pagination .owl-page.active span{ color:$workColor; }
 		.footer{
 			.lower{ background-image:url(../images/logo_footer_work.png); }
 		}
@@ -88,10 +93,10 @@ iframe[id^='twitter-widget-']{ width:100% !important; }
 	&.about{
 		.fw-banner{ background-image:url(../images/banner_about.png); }	
 		#nav{
-			.logo{ border-bottom:2px solid #d7d32b; }
-			.navButton:hover span, .navButton.active span{ border-bottom:2px solid #d7d32b; }
+			.logo{ border-bottom:2px solid $aboutColor; }
+			.navButton:hover span, .navButton.active span{ border-bottom:2px solid $aboutColor; }
 		}
-		.owl .owl-controls .owl-pagination .owl-page.active span{ color:#d7d32b; }
+		.owl .owl-controls .owl-pagination .owl-page.active span{ color:$aboutColor; }
 		.footer{
 			.lower{ background-image:url(../images/logo_footer_about.png); }
 		}
@@ -223,6 +228,11 @@ iframe[id^='twitter-widget-']{ width:100% !important; }
 	&#latestNews{ margin-bottom:60px; }
 	&#contact{ 
 		padding:60px 0px 60px 0; 
+		.googlemap{ 
+			position:relative; height:600px; overflow: hidden;
+			.overlay{ width:100%; height:100%; z-index:10; position:absolute; z-index:10; }
+			iframe{ z-index:1; }
+		}  
 		.addresses	{ 
 			width:80%; max-width: $tabletMaxWidth; margin:20px auto 0px auto;
 			.address{ 
@@ -244,12 +254,11 @@ iframe[id^='twitter-widget-']{ width:100% !important; }
 	&#works{
 		a{ text-decoration: none; }
 		.worksLeft, .worksRight{ 
-			width:49%;
-			.mountWidthImage{ width:100%; }
-			.worksDesc{ @include respond-fonts(24px); color:$mainGreen; margin-top:30px; padding:0 30px; }
+			width:49%; margin:0 auto 50px auto;
+			.title{ margin:50px 0 30px 0; }
+			.border{ border-bottom:1px solid $workColor; width:150px; height:1px; margin:0 auto; }
+			.worksDesc{ @include respond-fonts(24px); color:$mainGreen; margin:30px 0; padding:0 30px; }
 		}
-		.worksLeft{ float:left; }
-		.worksRight{ float:right; }
 		.worksLeft, .worksRight{
 			@include respond-to(mobile){
 				float:none; width:100%; margin-top:40px;
@@ -304,7 +313,7 @@ iframe[id^='twitter-widget-']{ width:100% !important; }
 						opacity: 1; color:$mainGreen;
 					}
 					.name{ 
-						padding-top:50px; 
+						padding-top:80px; 
 						@include respond-fonts(28px); 
 						@include respond-to(mobile){ padding-top:10px; }; 
 					}
