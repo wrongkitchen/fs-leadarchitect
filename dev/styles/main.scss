@@ -225,6 +225,10 @@ $workColor : #e38025;
 		}
 	}
 	.mountWidthImage{ width:80%; margin:0 auto; max-width:$tabletMaxWidth; }
+	.mountHeightImage{ 
+		width:auto; margin:0 auto; 
+		@include respond-to(mobile){ width:100%; }
+	}
 	&#latestNews{ margin-bottom:60px; }
 	&#contact{ 
 		padding:60px 0px 60px 0; 

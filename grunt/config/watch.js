@@ -11,7 +11,8 @@ module.exports = function(grunt) {
             livereload: false
         },html: {
             files: [
-                '<%= yeogurt.dev %>/views/**/*.html'
+                '<%= yeogurt.dev %>/views/**/*.html',
+                '<%= yeogurt.dev %>/projects/**/*.html'
             ],
             tasks: [
                 'newer:copy:server',
