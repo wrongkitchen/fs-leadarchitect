@@ -12,7 +12,8 @@ module.exports = function(grunt) {
                 baseUrl: '<%= yeogurt.dev %>/scripts/',
                 mainConfigFile: '<%= yeogurt.dev %>/scripts/main.js',
                 out: '<%= yeogurt.dist %>/scripts/main.js',
-                optimize: 'uglify2',generateSourceMaps: true,
+                optimize: 'uglify2',
+                generateSourceMaps: true,
                 preserveLicenseComments: false
             }
         }

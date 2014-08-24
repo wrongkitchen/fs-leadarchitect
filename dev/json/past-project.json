@@ -1,51 +1,51 @@
 [
 	{ 
-		"href" : "projects/works-project.html",
+		"href" : "projects/1234-mall.html",
 		"thumbnail_normal" : "images/work/projects/past/1234-Mall.jpg",
 		"thumbnail_active" : "images/work/projects/past/1234-Mall.jpg",
-		"name" : "Lorem Ipsum",
-		"location" : "Hong Kong"
+		"name" : "1234space MALL",
+		"location" : "Shenzhen"
 	},
 	{ 
-		"href" : "",
+		"href" : "projects/889-shanghai.html",
 		"thumbnail_normal" : "images/work/projects/past/889-Shanghai.jpg",
 		"thumbnail_active" : "images/work/projects/past/889-Shanghai.jpg",
-		"name" : "Lorem Ipsum",
-		"location" : "Hong Kong"
+		"name" : "PLAZA 889",
+		"location" : "Shanghai"
 	},
 	{ 
-		"href" : "",
+		"href" : "projects/elements.html",
 		"thumbnail_normal" : "images/work/projects/past/Elements.jpg",
 		"thumbnail_active" : "images/work/projects/past/Elements.jpg",
-		"name" : "Lorem Ipsum",
+		"name" : "Elements",
 		"location" : "Hong Kong"
 	},
 	{ 
-		"href" : "",
+		"href" : "projects/hysan-place.html",
 		"thumbnail_normal" : "images/work/projects/past/Hysan-Place.jpg",
 		"thumbnail_active" : "images/work/projects/past/Hysan-Place.jpg",
-		"name" : "Lorem Ipsum",
+		"name" : "Hysan Place",
 		"location" : "Hong Kong"
 	},
 	{ 
-		"href" : "",
+		"href" : "projects/iapm.html",
 		"thumbnail_normal" : "images/work/projects/past/IAPM.jpg",
 		"thumbnail_active" : "images/work/projects/past/IAPM.jpg",
-		"name" : "Lorem Ipsum",
-		"location" : "Hong Kong"
+		"name" : "iAPM",
+		"location" : "Shanghai"
 	},
 	{ 
 		"href" : "",
 		"thumbnail_normal" : "images/work/projects/past/IFC-Pudong.jpg",
 		"thumbnail_active" : "images/work/projects/past/IFC-Pudong.jpg",
-		"name" : "Lorem Ipsum",
-		"location" : "Hong Kong"
+		"name" : "IFC Pudong",
+		"location" : "Shanghai"
 	},
 	{ 
-		"href" : "",
+		"href" : "projects/oakbay-dreamport.html",
 		"thumbnail_normal" : "images/work/projects/past/OakBay-Dreamport.jpg",
 		"thumbnail_active" : "images/work/projects/past/OakBay-Dreamport.jpg",
-		"name" : "Lorem Ipsum",
-		"location" : "Hong Kong"
+		"name" : "OakBay Dreamport",
+		"location" : "Beijing"
 	}
 ]

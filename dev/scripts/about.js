@@ -1,4 +1,18 @@
-$(document).ready(function(){
+'use strict';
+require.config({
+    paths: {
+        global: 'modules/global'
+    }
+});
+
+require(['global'], function (global) {
+
+    global.init();
+
+    // window.showPeopleDetail = function(pHref){
+    //     console.log(pHref);
+    // };
+
     $.ajax({
         url: 'json/people.json',
         type: 'get',
@@ -19,4 +33,5 @@ $(document).ready(function(){
             $(".peopleGallery").html(html);
         }
     });
+
 });

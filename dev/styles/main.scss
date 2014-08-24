@@ -40,62 +40,49 @@ iframe[id^='twitter-widget-']{ width:100% !important; }
 	.mobile{ display:block; }
 	.desktop{ display:none; }
 }
-$homeColor : #F68F1F;
+$homeColor : #42BDAE;
 $aboutColor : #E1E319;
 $contactColor : #D41C57;
-$workColor : #e38025;
-
+$workColor : #F68F1F;
+$newsColor : rgb(238,79,146);
+#bannerArrow{ 
+	position: absolute; width: 100px; height: 100px; cursor:pointer;
+	z-index: 100; bottom: 0; margin-left: -50px; left: 50%;
+}
 .wrapper{
 	&.home{
-		.fw-banner{ background-image:url(../images/banner_home.png); }
-		#nav{
-			.logo{ border-bottom:2px solid $homeColor; }		
-			.navButton:hover span, .navButton.active span{ border-bottom:2px solid $homeColor; }
-		}
+		.fw-banner{ background-image:url(../images/banner_home.jpg); }
 		.owl .owl-controls .owl-pagination .owl-page.active span{ color:$homeColor; }
 		.footer{
 			.lower{ background-image:url(../images/logo_footer_home.png); }
 		}
 	} 
 	&.contact{
-		.fw-banner{ background-image:url(../images/banner_contact.png); }
-		#nav{
-			.logo{ border-bottom:2px solid $contactColor; }		
-			.navButton:hover span, .navButton.active span{ border-bottom:2px solid $contactColor; }
-		}
+		.fw-banner{ background-image:url(../images/banner_contact.jpg); }
 		.owl .owl-controls .owl-pagination .owl-page.active span{ color:$contactColor; }
 		.footer{
 			.lower{ background-image:url(../images/logo_footer_contact.png); }
 		}
 	} 
 	&.work{
-		.fw-banner{ background-image:url(../images/banner_work.png); }	
-		#nav{
-			.logo{ border-bottom:2px solid $workColor; }
-			.navButton:hover span, .navButton.active span{ border-bottom:2px solid $workColor; }
-		}
+		.fw-banner{ background-image:url(../images/banner_work.jpg); }	
 		.owl .owl-controls .owl-pagination .owl-page.active span{ color:$workColor; }
 		.footer{
 			.lower{ background-image:url(../images/logo_footer_work.png); }
 		}
 	}
 	&.news{
-		.fw-banner{ background-image:url(../images/banner_news.png); }	
-		#nav{
-			.logo{ border-bottom:2px solid #cb3362; }
-			.navButton:hover span, .navButton.active span{ border-bottom:2px solid #cb3362; }
-		}
-		.owl .owl-controls .owl-pagination .owl-page.active span{ color:#cb3362; }
+		.fw-banner{ 
+			background-image:url(../images/banner_news.jpg); 
+			.txt-container .txt{ margin-top:-82px; }
+		}	
+		.owl .owl-controls .owl-pagination .owl-page.active span{ color:$newsColor; }
 		.footer{
 			.lower{ background-image:url(../images/logo_footer_news.png); }
 		}
 	}
 	&.about{
-		.fw-banner{ background-image:url(../images/banner_about.png); }	
-		#nav{
-			.logo{ border-bottom:2px solid $aboutColor; }
-			.navButton:hover span, .navButton.active span{ border-bottom:2px solid $aboutColor; }
-		}
+		.fw-banner{ background-image:url(../images/banner_about.jpg); }	
 		.owl .owl-controls .owl-pagination .owl-page.active span{ color:$aboutColor; }
 		.footer{
 			.lower{ background-image:url(../images/logo_footer_about.png); }
@@ -103,10 +90,10 @@ $workColor : #e38025;
 	}
 	&.thirdPage, &.subPage{
 		.fw-banner{
-			height:290px; background:$mainGreen; min-height:initial; position:relative;
+			height:100%; background:$mainGreen; min-height:initial; position:relative;
 			.icon{ 
-				width:70px; position:absolute; color:#828f94; z-index:10;
-				border-bottom:1px solid #828f94; font-size:30px;
+				width:50px; position:absolute; color:$homeColor; z-index:10;
+				font-size:35px;
 				@include respond-to(mobile){ width:40px; }
 				&.icon-x-1{ 
 					left:0; top:140px; text-align: right; 
@@ -124,7 +111,10 @@ $workColor : #e38025;
 			.txt-container{ 
 				height:auto; padding-top:140px; 
 				.title{ text-align: center; }
-				.subTitle{ @include respond-fonts(24px); max-width:60%; text-align: center; margin:10px auto 0px auto; }
+				.subTitle{ 
+					@include respond-fonts(18px); max-width:450px; text-align: center; margin:10px auto 20px auto; 
+					.small{ @include respond-fonts(14px); }
+				}
 			}
 			.bottom-arrow{ display:none; }
 		}
@@ -172,7 +162,10 @@ $workColor : #e38025;
 			span{ max-width:500px; display:inline-block; }
 		}
 	}
-	.bottom-arrow{ width:100%; text-align:center; bottom:10px; position:absolute; cursor:pointer; z-index:10; }
+	.bottom-arrow{ 
+		width:100%; text-align:center; bottom:10px; position:absolute; cursor:pointer; z-index:10; 
+		.icon-arrow-down{ position:relative; z-index:100; cursor:pointer; }
+	}
 }
 
 #nav{ 
@@ -184,7 +177,13 @@ $workColor : #e38025;
     .navButton{ 
     	color:#FFF; width:50%; font-family:'BrownBold', Arial, sans-serif; 
     	float: left; text-align: center;
-    	&:hover span, &.active span{ border-bottom:2px solid #e38025; padding-bottom:5px; }
+    	&.btn-works.active span, &.btn-works:hover span{ border-bottom:2px solid $workColor; }
+    	&.btn-news.active span, &.btn-news:hover span{ border-bottom:2px solid $newsColor; }
+    	&.btn-about.active span, &.btn-about:hover span{ border-bottom:2px solid $aboutColor; }
+    	&.btn-contact.active span, &.btn-contact:hover span{ border-bottom:2px solid $contactColor; }
+    	&:hover span, &.active span{ 
+    		padding-bottom:5px; 
+    	}
     }
     .navLeft, .navRight{
     	padding-top: 32px; 
@@ -199,8 +198,15 @@ $workColor : #e38025;
     	position: absolute; right:20px; color:#FFF; top:50px; display:none; @include respond-fonts(40px); cursor:pointer;
     	@include respond-to(mobile){ display:block; }
     }
-    .logo{ padding-bottom:5px; text-align:center; display:inline-block; }
-    &.active{ background-color:$mainGreen; }
+    .logo{ padding-bottom:5px; text-align:center; display:inline-block; border-bottom:2px solid $homeColor; }
+    &.active{ 
+    	background-color:$mainGreen; padding:15px 0;
+    	.navLeft, .navRight{ padding-top:10px; } 
+    	.logo{
+    		height:12px;
+    		img{ visibility: hidden; height:31px; width:85px; }
+    	} 
+    }
     @include respond-to(mobile)
     {
     	height: 60px; position:absolute;
@@ -229,22 +235,27 @@ $workColor : #e38025;
 		width:auto; margin:0 auto; 
 		@include respond-to(mobile){ width:100%; }
 	}
-	&#latestNews{ margin-bottom:60px; }
+	&#latestNews{ margin-bottom:120px; }
+	&#workThirdPage{ padding-bottom:150px; }
 	&#contact{ 
 		padding:60px 0px 60px 0; 
+		.googleMapOwl{
+			.owl-pagination{ display:none; }
+		}
 		.googlemap{ 
-			position:relative; height:600px; overflow: hidden;
+			position:relative; width:80%; margin:0 auto;
+			h3{ margin-bottom:40px; @include respond-fonts(24px); color:$mainGreen; }
 			.overlay{ width:100%; height:100%; z-index:10; position:absolute; z-index:10; }
 			iframe{ z-index:1; }
-		}  
-		.addresses	{ 
-			width:80%; max-width: $tabletMaxWidth; margin:20px auto 0px auto;
 			.address{ 
-				float:left; width:33%; 
+				width:400px; margin:20px auto;
 				@include respond-to(mobile){
 					float:none; margin:0 auto; width:100%;
 				}
 			}
+		}  
+		.addresses	{ 
+			width:80%; max-width: $tabletMaxWidth; margin:20px auto 0px auto;
 			.contactLeft, .contactMiddle{ 
 				border-right:1px solid #bfbfbf; 
 				@include respond-to(mobile){
@@ -258,11 +269,13 @@ $workColor : #e38025;
 	&#works{
 		a{ text-decoration: none; }
 		.worksLeft, .worksRight{ 
-			width:49%; margin:0 auto 50px auto;
+			width:49%;
 			.title{ margin:50px 0 30px 0; }
 			.border{ border-bottom:1px solid $workColor; width:150px; height:1px; margin:0 auto; }
 			.worksDesc{ @include respond-fonts(24px); color:$mainGreen; margin:30px 0; padding:0 30px; }
 		}
+		.worksLeft{ margin:0 auto 50px auto; }
+		.worksRight{ margin:0 auto 120px auto; }
 		.worksLeft, .worksRight{
 			@include respond-to(mobile){
 				float:none; width:100%; margin-top:40px;
@@ -270,7 +283,7 @@ $workColor : #e38025;
 			}
 		}
 		.worksMidBanner{ 
-			margin:40px 0; padding:100px 0; background-color: #f2f0ef; 
+			margin:40px 0; padding:150px 0; background-color: #f2f0ef; 
 			color:$mainGreen; @include respond-fonts(48px); position:relative;
 			.txt{ padding:0 40px; }
 			.bottom-arrow{ 
@@ -280,10 +293,10 @@ $workColor : #e38025;
 		}
 		.whatwedo{ 
 			margin:0 auto 60px auto; 
-			.whatwedo-txt{ width:60%; margin:0 auto 20px auto; }
+			.whatwedo-txt{ width:80%; max-width:400px; margin:0 auto 20px auto; }
 		}
 		.bottomBanner{ 
-			background-image:url(../images/banner_work2.png); 
+			background-image:url(../images/banner_work2.jpg); 
 			background-repeat: no-repeat; background-position:center center;
 			width:100%; height:660px;
 			.title{ color:#FFF; margin:0 auto; padding:250px 0; width:80%; }
@@ -342,6 +355,9 @@ $workColor : #e38025;
 	&#workThirdPage{
 		.mountWidthImage{ width:100%; }
 		.projectTitle{ width:60%; margin:40px auto; }
+		.projectNode{
+			img.mountWidthImage{ max-width:700px; }
+		}
 		.projectLeft{ 
 			width:29%; margin-right:2%; text-align: left; float:right; font-size:14px;
 			.txt{ padding-right:10%; }
@@ -349,6 +365,7 @@ $workColor : #e38025;
 		.projectRight{ width:69%; float:right; @include respond-fonts(28px); text-align: left; }
 		.projectLeft, .projectRight{ 
 			border-top:1px solid #e38025; padding:40px 0; 
+			ul{ padding-left:30px; margin-top:20px; }
 			@include respond-to(mobile){
 				float:none; width:85%; margin:0 auto;
 			}
@@ -373,7 +390,7 @@ $workColor : #e38025;
 				.type{ float:right; }
 			}
 			.title{ margin:20px 0; }
-			.introDesc{ width:80%; margin:0 auto; }
+			.introDesc{ width:80%; max-width:400px; margin:0 auto; }
 			.btn{ margin:20px auto; }
 			hr{ padding:0 20px; }
 		}
@@ -438,8 +455,9 @@ $workColor : #e38025;
 			}
 			.about-content{
 				padding-bottom:30px;
+				.lineBlock{ width:80%; margin: 0 auto; height:1px; border-bottom:1px solid $aboutColor; }
 				.title{ @include respond-fonts(28px); margin:30px 0; }
-				.about-desc{ width:60%; margin:0 auto; }
+				.about-desc{ width:60%; max-width:350px; margin:20px auto; }
 			}
 			&#aboutJoin{
 				.about-desc{
@@ -485,9 +503,9 @@ $workColor : #e38025;
 					.about-slide-people{ 
 						width:15%; display:inline-block; margin-right:1%; position:relative;
 						.name{ 
-							position:absolute; top:0; left:0; width:100%; height:100%; 
+							position:absolute; top:0; left:0; width:100%; height:180px; 
 							text-align: center; color:#FFF; opacity: 0; @extend .animation;
-							background-image:url(../images/op-e38025-40.png); margin-bottom:40px;
+							background-image:url(../images/op-d7d32b-40.png); margin-bottom:40px;
 							span{ position: relative; top: 50%; margin-top: -25%; display: block; }
 							@include respond-to(mobile){ 
 								opacity: 1; background-image:none;
@@ -510,8 +528,9 @@ $workColor : #e38025;
 				}
 				.close{ 
 					position:absolute; top:-20px; width:100%; cursor:pointer;
-					font-size:30px; color:#8a8888; z-index:10; 
-					.icon-x-1{ width:10%; text-align: center; }
+					font-size:30px; z-index:10; 
+					a{ text-decoration: none; }
+					.icon-x-1{ width:10%; text-align: center; color:#8a8888; }
 				}
 				.about-slide-title{ 
 					width:60%; margin:40px auto; @include respond-fonts(24px); 
@@ -553,13 +572,13 @@ $workColor : #e38025;
 	&.detail{ color:$mainGreen; font-size:12px; padding:5px 30px; border:1px solid $mainGreen; }
 }
 
-.owl{
+#aboutPeopleOwl, .owl{
 	.newsNode{ 
 		text-align: center; 
 		.newsDesc{ @include respond-fonts(24px); color:#000; margin:20px 0; }
 	}
 	.owl-controls{ 
-		position:relative; margin:20px 0; 
+		margin:20px 0; 
 		.owl-pagination{
 			.owl-page{
 				display:inline-block; width:20px; line-height:30px; text-align: center; 
@@ -573,18 +592,18 @@ $workColor : #e38025;
 			}
 		}
 		.owl-buttons{
-			position:absolute; top:0; left:0; width:100%;
+			top:0; left:0; width:100%;
 			.owl-prev{ 
-				padding-right:10%; 
+				padding-right:10%; left:0;
 				@include respond-to(mobile){ float:left; }
 			}
 			.owl-next{ 
-				padding-left:10%; 
+				padding-left:10%; right:0;
 				@include respond-to(mobile){ float:right; }
 			}
 			.owl-prev, .owl-next{ 
 				font-family: 'leadarchitect'; font-size: 30px; color:$mainGreen;
-				display:inline-block;
+				position:absolute; top:50%; margin-top:-30px;
 			}
 		}
 	}
@@ -618,15 +637,19 @@ $workColor : #e38025;
 	background-color:#e9e7e6; margin:30px 0px; 
 	.shortFilmLeft{ display:table-cell; width:70%; } 
 	.shortFilmRight{ 
-		display:table-cell; width:30%; vertical-align:middle; color:$mainGreen; @include respond-fonts(40px); text-align: center;
-		@include respond-to(mobile){ padding:40px 0; }
+		display:table-cell; width:30%; vertical-align:middle; color:$mainGreen; 
+		h3{ margin:10px 0; @include respond-fonts(40px); }
+		@include respond-fonts(28px); text-align: center;
+		@include respond-to(mobile){ padding:20px 0 40px 0; }
 	}
 	.shortFilmLeft, .shortFilmRight{
 		@include respond-to(mobile){
 			display:block; width:100%;
 		}
 	}
-	.mountWidthImage{ width:100%; }
+	.mountWidthImage{ 
+		width:100%; 
+	}
 }
 .footer{
 	background-color:$footerGrey; 
@@ -641,7 +664,7 @@ $workColor : #e38025;
 				margin:40px 0 0 0; color:#bec9cd; font-size:20px;
 				.icon{ 
 					padding:15px 25px; border-left:1px solid #FFF; @extend .animation;
-					&.icon-facebook{ border:none; }
+					&.icon-twitter-alt{ border:none; }
 					&:hover{ color:$mainGreen; cursor:pointer; }
 					&.icon-pinterest-circled{ border-right:1px solid #FFF; }
 					@include respond-to(mobile){ display:inline-block; padding:20px 30px; margin-bottom:20px; }
@@ -672,9 +695,11 @@ $workColor : #e38025;
 		}
 	}
 }
-.terms{ 
+.privacy, .terms{ 
 	width:80%; margin:0 auto; background-color:#FFF; font-size:14px;
 	padding-bottom:40px; position:relative; display:none;
+	li{ list-style-position: inside; }
+	.sub{ padding-left:30px; }
 	.close{ position:absolute; top:10px; color:$mainGreen; cursor:pointer; }
 	.termsTitle{ text-align: center; padding:20px 0; color:$mainGreen; font-size: 20px; }
 	.termsLeft{ width:31%; margin-right:2%; float:left; }
@@ -682,4 +707,7 @@ $workColor : #e38025;
 	.termsRight{ width:33%; float:left; }
 }
 
-#termsCaller{ cursor:pointer; }
+#privacyCaller, #termsCaller{ 
+	cursor:pointer; 
+	&.active{ border-bottom:2px solid $homeColor; }
+}

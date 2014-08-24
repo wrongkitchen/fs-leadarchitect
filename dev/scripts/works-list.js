@@ -1,12 +1,22 @@
-$(document).ready(function(){
+'use strict';
+require.config({
+    paths: {
+    	global: 'modules/global'
+    }
+});
+
+require(['global'], function (global) {
+
+	global.init();
+
 	var projectType = urlParam('type');
 	var url = 'json/present-project.json'
 	var workTypeTitle = "Present Projects";
-	var workTypeDesc = "A selection of projects and experience prior to the formation of Lead";
+	var workTypeDesc = "The works described in this section are current Lead projects and recent appointments<br /><br /><span class=\"small\">All images are used licence or copyright Leadarchitects Limited</span>";
 	if(projectType == 'past'){
 		url = 'json/past-project.json'
 		var workTypeTitle = "Past Projects";
-		var workTypeDesc = "A selection of projects and experience prior to the formation of Lead";
+		var workTypeDesc = "The works described in this section are projects of Benoy Limited where Lead team members played key roles<br /><br /><span class=\"small\">All images are used licence or copyright Leadarchitects Limited</span>";
 	}
 	$("#workTypeTitle").html(workTypeTitle);
 	$("#workTypeDesc").html(workTypeDesc);
@@ -39,4 +49,5 @@ $(document).ready(function(){
 			console.log(err);
 		}
 	});
+
 });
