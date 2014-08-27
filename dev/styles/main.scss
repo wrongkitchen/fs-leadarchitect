@@ -15,7 +15,7 @@
 @import 'vendor/_bourbon';
 // [/include]
 
-@import 'fonts';
+@import 'fonts'; 
 
 /**
 *   The default folder for the styles subgenerator is `partials`
@@ -34,7 +34,7 @@ body{ font-family: 'BrownRegular', Arial, sans-serif; width:100%; height:100%; }
 strong{ font-family: 'BrownBold', Arial, sans-serif; }
 
 iframe[id^='twitter-widget-']{ width:100% !important; }
-
+a{ text-decoration: none; }
 .mobile{ display:none; }
 @include respond-to(mobile){ 
 	.mobile{ display:block; }
@@ -169,7 +169,7 @@ $newsColor : rgb(238,79,146);
 	}
 }
 .fw-banner{
-	position:fixed; background-position:top center; 
+	position:absolute; background-position:top center; 
 	width:100%; height:100%; top:0; min-height:600px;
 	-moz-background-size:cover;
 	-webkit-background-size:cover;
