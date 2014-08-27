@@ -3,12 +3,20 @@
 */
 
 $mainGreen: #264c59;
+$mainGreenAlpha: rgba(38,76,89,.8);
 $secGreen: #459d8d;
 
 $footerGrey: #f2f0ef;
 
 $tabletMaxWidth: 960px;
 $mobileMaxWidth: 840px - 40px; //600px
+
+
+$fontSize1 : 41px;
+$fontSize2 : 25px;
+$fontSize3 : 19px;
+$fontSize4 : 15px;
+$fontSize5 : 13px;
 
 .animation{
     -webkit-transition: all .5s linear;

@@ -1,131 +1,157 @@
 [
 	{ 
 		"name" : "Ada Ng",
+		"position" : "Divisional Director",
 		"img"  : "AdaN__DSF6437_Colour_B&W.png",
 		"href" : "people/ada_ng.html"
 	},
 	{ 
 		"name" : "Alex Brazier",
+		"position" : "Creative Director",
 		"img" : "AlexB__DSF6392_Colour_B&W.png",
 		"href" : "people/alex_brazier.html"
 	},
 	{ 
 		"name" : "Anthony Kwok",
+		"position" : "Technical Associate",
 		"img" : "AnthonyK__DSF6495_Colour_B&W.png",
 		"href" : "people/anthony_kwok.html"
 	},
 	{ 
 		"name" : "Bo Ng",
+		"position" : "Senior Interior Designer",
 		"img": "BoN__DSF6447_Colour_B&W.png",
 		"href" : "people/bo_ng.html"
 	},
 	{ 
 		"name" : "Chris Lohan",
+		"position" : "Director",
 		"img": "ChrisL__DSF6426_Colour_B&W.png",
 		"href" : "people/chris_lohan.html"
 	},
 	{ 
 		"name" : "Christine Hau",
+		"position" : "Director",
 		"img": "ChristineH__DSF6390_Colour_B&W.png",
 		"href" : "people/christine_hau.html"
 	},
 	{ 
 		"name" : "Claude Touikan",
+		"position" : "Director",
 		"img": "ClaudeT__DSF6380_Colour_B&W.png",
 		"href" : "people/claude_touikan.html"
 	},
 	{ 
 		"name" : "CY Ng",
+		"position" : "",
 		"img": "CY__DSF6414_Colour_B&W.png",
 		"href" : "people/cy_ng.html"
 	},
 	{ 
 		"name" : "David Buffonge",
+		"position" : "Director",
 		"img": "DavidB__DSF6507_Colour_B&W.png",
 		"href" : "people/david_buffonge.html"
 	},
 	{ 
 		"name" : "Ethan Wong",
+		"position" : "Senior Architectural Designer",
 		"img": "EthanW__DSF6458_Colour_B&W.png",
 		"href" : "people/ethan_wong.html"
 	},
 	{ 
 		"name" : "Hon Fung Lee",
+		"position" : "DIRECTOR",
 		"img": "Fung__DSF6453_Colour_B&W.png",
 		"href" : "people/hon_fung_lee.html"
 	},
 	{ 
 		"name" : "Jin Chen",
+		"position" : "Senior Architect",
 		"img": "JinC__DSF6485_Colour_B&W.png",
 		"href" : "people/jin_chen.html"
 	},
 	{ 
 		"name" : "John Denton",
+		"position" : "Director",
 		"img": "JohnD__DSF6366_Colour_B&W.png",
 		"href" : "people/john_denton.html"
 	},
 	{ 
 		"name" : "Kenji Wong",
+		"position" : "Associate Director",
 		"img": "KenjiW__DSF6468_Colour_B&W.png",
 		"href" : "people/kenji_wong.html"
 	},
 	{ 
 		"name" : "Meeta Patel",
+		"position" : "Director",
 		"img": "MeetaP__DSF6500_Colour_B&W.png",
 		"href" : "people/meeta_patel.html"
 	},
 	{ 
 		"name" : "Melissa Chan",
+		"position" : "Senior Administrator",
 		"img": "MelissaC__DSF6408_Colour_B&W.png",
 		"href" : "people/melissa_chan.html"
 	},
 	{ 
 		"name" : "Raymond Chan",
+		"position" : "Senior Architectural Designer",
 		"img": "RayChan__DSF6386_Colour_B&W.png",
 		"href" : "people/raymond_chan.html"
 	},
 	{ 
 		"name" : "Raymond Chu",
+		"position" : "Senior Architect",
 		"img": "RayChu__DSF6482_Colour_B&W.png",
 		"href" : "people/raymond_chu.html"
 	},
 	{ 
 		"name" : "Ricky Tsang",
+		"position" : "Architectural Designer",
 		"img": "RickyT__DSF6472_Colour_B&W.png",
 		"href" : "people/ricky_tsang.html"
 	},
 	{ 
 		"name" : "Simon Blore",
+		"position" : "Director",
 		"img": "SimonB__DSF6340_Colour_B&W.png",
 		"href" : "people/simon_blore.html"
 	},
 	{ 
 		"name" : "Simon Chua",
+		"position" : "Director",
 		"img": "SimonC__DSF6405_Colour_B&W.png",
 		"href" : "people/simon_chua.html"
 	},
 	{ 
 		"name" : "Skiva Lui",
+		"position" : "Accounts Manager",
 		"img": "Skiva__DSF6489_Colour_B&W.png",
 		"href" : "people/skiva_lui.html"
 	},
 	{ 
 		"name" : "Tadeu Batista",
+		"position" : "Architect",
 		"img": "TadB__DSF6375_Colour_B&W.png",
 		"href" : "people/tadeu_batista.html"
 	},
 	{ 
 		"name" : "Tiffany Chan",
+		"position" : "Summer Intern (architecture)",
 		"img": "Tiffany__DSF6493_Colour_B&W.png",
 		"href" : "people/tiffany_chan.html"
 	},
 	{ 
 		"name" : "Wisely Suen",
+		"position" : "Senior Associate Director",
 		"img": "WiselyS__DSF6396_Colour_B&W.png",
 		"href" : "people/wisely_suen.html"
 	},
 	{ 
 		"name" : "Xing Wang",
+		"position" : "Architect",
 		"img": "XingW__DSF6417_Colour_B&W.png",
 		"href" : "people/xing_wang.html"
 	}

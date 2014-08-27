@@ -45,13 +45,16 @@ $aboutColor : #E1E319;
 $contactColor : #D41C57;
 $workColor : #F68F1F;
 $newsColor : rgb(238,79,146);
+
 #bannerArrow{ 
 	position: absolute; width: 100px; height: 100px; cursor:pointer;
 	z-index: 100; bottom: 0; margin-left: -50px; left: 50%;
 }
+
 .wrapper{
 	&.home{
 		.fw-banner{ background-image:url(../images/banner_home.jpg); }
+		#nav .logo{ border-bottom:2px solid $homeColor; }
 		.owl .owl-controls .owl-pagination .owl-page.active span{ color:$homeColor; }
 		.footer{
 			.lower{ background-image:url(../images/logo_footer_home.png); }
@@ -59,13 +62,21 @@ $newsColor : rgb(238,79,146);
 	} 
 	&.contact{
 		.fw-banner{ background-image:url(../images/banner_contact.jpg); }
+		#nav .logo{ border-bottom:2px solid $contactColor; }
 		.owl .owl-controls .owl-pagination .owl-page.active span{ color:$contactColor; }
 		.footer{
 			.lower{ background-image:url(../images/logo_footer_contact.png); }
 		}
 	} 
 	&.work{
-		.fw-banner{ background-image:url(../images/banner_work.jpg); }	
+		.fw-banner{ 
+			background-image:url(../images/banner_work.jpg); 
+			.txt-container .txt{ 
+				margin-top:-82px; 
+				span{ max-width: 560px; } 
+			}
+		}	
+		#nav .logo{ border-bottom:2px solid $workColor; }
 		.owl .owl-controls .owl-pagination .owl-page.active span{ color:$workColor; }
 		.footer{
 			.lower{ background-image:url(../images/logo_footer_work.png); }
@@ -76,6 +87,7 @@ $newsColor : rgb(238,79,146);
 			background-image:url(../images/banner_news.jpg); 
 			.txt-container .txt{ margin-top:-82px; }
 		}	
+		#nav .logo{ border-bottom:2px solid $newsColor; }
 		.owl .owl-controls .owl-pagination .owl-page.active span{ color:$newsColor; }
 		.footer{
 			.lower{ background-image:url(../images/logo_footer_news.png); }
@@ -83,6 +95,7 @@ $newsColor : rgb(238,79,146);
 	}
 	&.about{
 		.fw-banner{ background-image:url(../images/banner_about.jpg); }	
+		#nav .logo{ border-bottom:2px solid $aboutColor; }
 		.owl .owl-controls .owl-pagination .owl-page.active span{ color:$aboutColor; }
 		.footer{
 			.lower{ background-image:url(../images/logo_footer_about.png); }
@@ -92,28 +105,29 @@ $newsColor : rgb(238,79,146);
 		.fw-banner{
 			height:100%; background:$mainGreen; min-height:initial; position:relative;
 			.icon{ 
-				width:50px; position:absolute; color:$homeColor; z-index:10;
-				font-size:35px;
+				width:50px; position:absolute; z-index:10; @include respond-fonts($fontSize1);
 				@include respond-to(mobile){ width:40px; }
+				a{ color:$mainGreen; text-decoration: none; }
 				&.icon-x-1{ 
-					left:0; top:140px; text-align: right; 
+					left:0; top:10px; text-align: right; 
 					@include respond-to(mobile){ display:none; }
 				}
 				&.icon-10b-right{ 
-					top:140px; right:0; text-align: left; 
+					top:10px; right:0; text-align: left;
+					padding-top:10px;
 					@include respond-to(mobile){ left:0; right:auto; }
 				}
-				&.icon-11b-left{ top:200px; right:0; text-align: left; }
+				&.icon-11b-left{ top:70px; right:0; text-align: left; padding-top:10px; }
 				&.icon-10b-right, &.icon-11b-left{
 					@include respond-to(mobile){ top:60%; border:none; }
 				}
 			}
 			.txt-container{ 
-				height:auto; padding-top:140px; 
+				height:auto; padding:20px 0; 
 				.title{ text-align: center; }
 				.subTitle{ 
-					@include respond-fonts(18px); max-width:450px; text-align: center; margin:10px auto 20px auto; 
-					.small{ @include respond-fonts(14px); }
+					@include respond-fonts($fontSize3); max-width:500px; text-align: center; margin:10px auto 20px auto; 
+					.small{ @include respond-fonts($fontSize4); }
 				}
 			}
 			.bottom-arrow{ display:none; }
@@ -123,11 +137,17 @@ $newsColor : rgb(238,79,146);
 			.midContentRelative{ height:auto; }
 			.midContentAbsolute{ position:static; }
 		}
+	}
+	&.subPage{
+		.fw-banner{
+			.icon{ color:$homeColor; }
+		}
 		#nav{ background:#06171f; }
 	}
 	&.thirdPage{ 
 		.fw-banner{
 			background:#FFF; color:$mainGreen; 
+			.icon{ color:$mainGreen; border-bottom: 1px solid #eee; }
 		}
 		#nav{ background:$mainGreen; }
 	}
@@ -151,7 +171,11 @@ $newsColor : rgb(238,79,146);
 .fw-banner{
 	position:fixed; background-position:top center; 
 	width:100%; height:100%; top:0; min-height:600px;
-	@include respond-fonts(48px); color:#FFF;
+	-moz-background-size:cover;
+	-webkit-background-size:cover;
+	-o-background-size:cover;
+	background-size:cover;
+	@include respond-fonts($fontSize1); color:#FFF;
 	@include respond-to(mobile){
 		position:absolute;
 	}
@@ -169,9 +193,13 @@ $newsColor : rgb(238,79,146);
 }
 
 #nav{ 
-    padding: 30px 0; position:fixed; z-index:100;
+    padding: 30px 0; position:relative; z-index:100;
     text-align:center; width:100%; background-color:transparent;
-    .container{ max-width:700px; }
+    .container{ max-width:700px; margin-bottom:10px; }
+    .backToTop{ 
+    	width:100px; height:20px; color:#FFF; @include respond-fonts($fontSize5); font-weight: bold; z-index:10; 
+    	position:absolute; right:0; bottom:26px; cursor:pointer; display:none;
+    }
 	.navLeft{ float: left; width:40%; position:absolute; left:0; top:0; }
 	.navRight{ float: right; width:40%; position:absolute; right:0; top:0; }
     .navButton{ 
@@ -182,7 +210,7 @@ $newsColor : rgb(238,79,146);
     	&.btn-about.active span, &.btn-about:hover span{ border-bottom:2px solid $aboutColor; }
     	&.btn-contact.active span, &.btn-contact:hover span{ border-bottom:2px solid $contactColor; }
     	&:hover span, &.active span{ 
-    		padding-bottom:5px; 
+    		padding-bottom:2px; 
     	}
     }
     .navLeft, .navRight{
@@ -195,12 +223,13 @@ $newsColor : rgb(238,79,146);
     	@include respond-to(mobile){ display:none; }
     }
     .menu{ 
-    	position: absolute; right:20px; color:#FFF; top:50px; display:none; @include respond-fonts(40px); cursor:pointer;
+    	position: absolute; right:20px; color:#FFF; top:50px; display:none; @include respond-fonts($fontSize1); cursor:pointer;
     	@include respond-to(mobile){ display:block; }
     }
     .logo{ padding-bottom:5px; text-align:center; display:inline-block; border-bottom:2px solid $homeColor; }
     &.active{ 
-    	background-color:$mainGreen; padding:15px 0;
+    	background-color:$mainGreenAlpha; padding:15px 0; position:fixed;
+    	.backToTop{ display: block; }
     	.navLeft, .navRight{ padding-top:10px; } 
     	.logo{
     		height:12px;
@@ -210,6 +239,7 @@ $newsColor : rgb(238,79,146);
     @include respond-to(mobile)
     {
     	height: 60px; position:absolute;
+    	.backToTop{ display:none; }
     }
 }
 .midContent{ 
@@ -224,12 +254,17 @@ $newsColor : rgb(238,79,146);
 .container{ width:100%; max-width:$tabletMaxWidth; margin:0 auto; position:relative; }
 .section{
 	text-align: center; position:relative;
-	.title{ 
-		@include respond-fonts(48px); color:$mainGreen; text-align: center; margin:50px 0; 
+	.smTitle, .title{ 
+		@include respond-fonts($fontSize1); color:$mainGreen; text-align: center; margin:50px 0; 
 		&.maxWidth{
 			span{ max-width: 600px; display: inline-block; }
 		}
+		&.scrollUp{ 
+			opacity: 0; position:relative; top:100px; @extend .animation;
+			&.active{ opacity: 1; top:0; }
+		}
 	}
+	.smTitle{ @include respond-fonts($fontSize2); }
 	.mountWidthImage{ width:80%; margin:0 auto; max-width:$tabletMaxWidth; }
 	.mountHeightImage{ 
 		width:auto; margin:0 auto; 
@@ -244,7 +279,7 @@ $newsColor : rgb(238,79,146);
 		}
 		.googlemap{ 
 			position:relative; width:80%; margin:0 auto;
-			h3{ margin-bottom:40px; @include respond-fonts(24px); color:$mainGreen; }
+			h3{ margin-bottom:40px; @include respond-fonts($fontSize2); color:$mainGreen; }
 			.overlay{ width:100%; height:100%; z-index:10; position:absolute; z-index:10; }
 			iframe{ z-index:1; }
 			.address{ 
@@ -272,7 +307,7 @@ $newsColor : rgb(238,79,146);
 			width:49%;
 			.title{ margin:50px 0 30px 0; }
 			.border{ border-bottom:1px solid $workColor; width:150px; height:1px; margin:0 auto; }
-			.worksDesc{ @include respond-fonts(24px); color:$mainGreen; margin:30px 0; padding:0 30px; }
+			.worksDesc{ @include respond-fonts($fontSize2); color:$mainGreen; margin:30px 0; padding:0 30px; }
 		}
 		.worksLeft{ margin:0 auto 50px auto; }
 		.worksRight{ margin:0 auto 120px auto; }
@@ -284,10 +319,12 @@ $newsColor : rgb(238,79,146);
 		}
 		.worksMidBanner{ 
 			margin:40px 0; padding:150px 0; background-color: #f2f0ef; 
-			color:$mainGreen; @include respond-fonts(48px); position:relative;
+			color:$mainGreen; @include respond-fonts($fontSize1); position:relative;
+			.container{ margin:0 auto; }
 			.txt{ padding:0 40px; }
+			a{ color:$mainGreen; text-decoration: none; }
 			.bottom-arrow{ 
-				position:absolute; bottom:10px; width:100%; 
+				position:absolute; bottom:10px; width:100%;  
 				.icon-08b-down{ margin:0 auto; }
 			}
 		}
@@ -299,7 +336,7 @@ $newsColor : rgb(238,79,146);
 			background-image:url(../images/banner_work2.jpg); 
 			background-repeat: no-repeat; background-position:center center;
 			width:100%; height:660px;
-			.title{ color:#FFF; margin:0 auto; padding:250px 0; width:80%; }
+			.title{ color:#FFF; margin:0 auto; padding:250px 0; width:80%; max-width:560px; }
 		}
 	}
 	&#workSubPage{
@@ -331,7 +368,7 @@ $newsColor : rgb(238,79,146);
 					}
 					.name{ 
 						padding-top:80px; 
-						@include respond-fonts(28px); 
+						@include respond-fonts($fontSize2);
 						@include respond-to(mobile){ padding-top:10px; }; 
 					}
 					.location{  }
@@ -355,14 +392,12 @@ $newsColor : rgb(238,79,146);
 	&#workThirdPage{
 		.mountWidthImage{ width:100%; }
 		.projectTitle{ width:60%; margin:40px auto; }
-		.projectNode{
-			img.mountWidthImage{ max-width:700px; }
-		}
+		.projectWrapper{ width:100%; max-width: 700px; margin:0 auto; }
 		.projectLeft{ 
-			width:29%; margin-right:2%; text-align: left; float:right; font-size:14px;
+			width:29%; margin-right:2%; text-align: left; float:right; @include respond-fonts($fontSize4);
 			.txt{ padding-right:10%; }
 		}
-		.projectRight{ width:69%; float:right; @include respond-fonts(28px); text-align: left; }
+		.projectRight{ width:69%; float:right; @include respond-fonts($fontSize2); text-align: left; }
 		.projectLeft, .projectRight{ 
 			border-top:1px solid #e38025; padding:40px 0; 
 			ul{ padding-left:30px; margin-top:20px; }
@@ -385,7 +420,7 @@ $newsColor : rgb(238,79,146);
 			width:80%; margin:0 auto 40px auto; 
 			img{ width:100%; }
 			.date-type{
-				font-size:20px; margin-top:10px;
+				@include respond-fonts($fontSize3); margin-top:10px;
 				.date{ float:left; }
 				.type{ float:right; }
 			}
@@ -399,7 +434,7 @@ $newsColor : rgb(238,79,146);
 		.node{ 
 			padding-top:60px; 
 			.nodeLeft{ 
-				width:20%; font-size:12px; font-family: 'BrownBold', Arial, sans-serif; 
+				width:20%; @include respond-fonts($fontSize5); font-family: 'BrownBold', Arial, sans-serif; 
 				.nodeLeftNewsDetail{ 
 					border-bottom:1px solid #000;
 				}
@@ -415,7 +450,7 @@ $newsColor : rgb(238,79,146);
 				}
 			}
 			.nodeRight{ 
-				width:80%; @include respond-fonts(24px);
+				width:80%; @include respond-fonts($fontSize3);
 				.txt{ 
 					padding:0 20px; 
 					@include respond-to(mobile){ padding:0; }
@@ -439,13 +474,13 @@ $newsColor : rgb(238,79,146);
 				.txt{ 
 					width:100%; background-color: $mainGreen; 
 					border-bottom:1px solid #d7d32b; 
-					text-align: center; @include respond-fonts(28px);
+					text-align: center; @include respond-fonts($fontSize2);
 					color: #FFF; line-height: 90px; text-transform: uppercase;
 				}
 				.icon-11b-left{ 
 					position:absolute; right:30px; top:25px; color:#FFF; 
 					@include respond-to(mobile){ top:32px; }
-					@include respond-fonts(36px); 
+					@include respond-fonts($fontSize1);
 				}
 			}
 			&.active{
@@ -456,8 +491,8 @@ $newsColor : rgb(238,79,146);
 			.about-content{
 				padding-bottom:30px;
 				.lineBlock{ width:80%; margin: 0 auto; height:1px; border-bottom:1px solid $aboutColor; }
-				.title{ @include respond-fonts(28px); margin:30px 0; }
-				.about-desc{ width:60%; max-width:350px; margin:20px auto; }
+				.title{ @include respond-fonts($fontSize2); margin:30px 0; }
+				.about-desc{ width:60%; max-width:450px; margin:20px auto; }
 			}
 			&#aboutJoin{
 				.about-desc{
@@ -468,7 +503,7 @@ $newsColor : rgb(238,79,146);
 						.txt{ padding:30px 30px 0px 30px; color:$mainGreen; }
 						.btnWrapper{ padding:30px 0 0 0; }
 					}
-					&.small{ font-size:14px; }
+					&.small{ @include respond-fonts($fontSize4); }
 					&.grey{ padding-bottom:0; }
 					&.active{
 						padding-bottom:0;
@@ -476,7 +511,7 @@ $newsColor : rgb(238,79,146);
 					}
 				}
 				.greyBanner{ 
-					width:100%; @include respond-fonts(28px); color:$mainGreen; text-align: center;
+					width:100%; @include respond-fonts($fontSize2); color:$mainGreen; text-align: center;
 					background-color:$footerGrey; padding:30px 0;
 				}
 				.btnWrapper{ padding:30px 0; }
@@ -528,12 +563,12 @@ $newsColor : rgb(238,79,146);
 				}
 				.close{ 
 					position:absolute; top:-20px; width:100%; cursor:pointer;
-					font-size:30px; z-index:10; 
+					@include respond-fonts($fontSize4); z-index:10; 
 					a{ text-decoration: none; }
-					.icon-x-1{ width:10%; text-align: center; color:#8a8888; }
+					.icon-x-1{ width:60px; text-align: center; color:#8a8888; }
 				}
 				.about-slide-title{ 
-					width:60%; margin:40px auto; @include respond-fonts(24px); 
+					width:60%; margin:40px auto; @include respond-fonts($fontSize2);
 					color:$mainGreen;
 				}
 				.aboutLeft{ 
@@ -560,8 +595,8 @@ $newsColor : rgb(238,79,146);
 				}
 				.pagination{ 
 					width:100%; margin-bottom:40px;
-					.pagin-left, .pagin-right{ width:10%; }
-					.page{ width:80%; color:$mainGreen; line-height: normal; }
+					.pagin-left, .pagin-right{ width:6%; }
+					.page{ width:88%; color:$mainGreen; line-height: normal; }
 				}
 			}
 		}
@@ -569,13 +604,13 @@ $newsColor : rgb(238,79,146);
 }
 .btn{
 	display:inline-block; text-transform: uppercase; cursor:pointer; @extend .animation;
-	&.detail{ color:$mainGreen; font-size:12px; padding:5px 30px; border:1px solid $mainGreen; }
+	&.detail{ color:$mainGreen; @include respond-fonts($fontSize5); padding:5px 30px; border:1px solid $mainGreen; }
 }
 
 #aboutPeopleOwl, .owl{
 	.newsNode{ 
 		text-align: center; 
-		.newsDesc{ @include respond-fonts(24px); color:#000; margin:20px 0; }
+		.newsDesc{ @include respond-fonts($fontSize2); color:#000; margin:40px 0; }
 	}
 	.owl-controls{ 
 		margin:20px 0; 
@@ -594,15 +629,15 @@ $newsColor : rgb(238,79,146);
 		.owl-buttons{
 			top:0; left:0; width:100%;
 			.owl-prev{ 
-				padding-right:10%; left:0;
+				padding-right:10%; left:20px;
 				@include respond-to(mobile){ float:left; }
 			}
 			.owl-next{ 
-				padding-left:10%; right:0;
+				padding-left:10%; right:20px;
 				@include respond-to(mobile){ float:right; }
 			}
 			.owl-prev, .owl-next{ 
-				font-family: 'leadarchitect'; font-size: 30px; color:$mainGreen;
+				font-family: 'leadarchitect'; @include respond-fonts($fontSize2); color:$mainGreen;
 				position:absolute; top:50%; margin-top:-30px;
 			}
 		}
@@ -616,30 +651,29 @@ $newsColor : rgb(238,79,146);
 				&.active{ color:#e38025; }
 			}
 		}
-		.pagin-left, .pagin-right{ float:left; font-size:30px; color:$mainGreen; }
+		.pagin-left, .pagin-right{ float:left; @include respond-fonts($fontSize4); color:$mainGreen; }
 	}
 }
 .social{
-	position:relative;
+	position:relative; cursor:pointer;
 	.icon{ 
 		width:100%; height:80px; background-color: $mainGreen; 
 		border-bottom:1px solid $secGreen; 
-		text-align: center; font-size: 35px;
-		color: #FFF; line-height: 90px; cursor:pointer;
+		text-align: center; @include respond-fonts($fontSize1);
+		color: #FFF; line-height: 90px;
 	}
 	.socialContent{ display:none; padding:40px 0; }
-	.icon-11b-left{ position:absolute; right:30px; top:25px; @include respond-fonts(36px); color:#FFF; }
+	.icon-11b-left{ position:absolute; right:30px; top:25px; @include respond-fonts($fontSize1); color:#FFF; }
 	&.active{
 		.icon-11b-left{ @extend .icon-arrow-down; }
 	}
 }
 .shortFilm{ 
 	background-color:#e9e7e6; margin:30px 0px; 
-	.shortFilmLeft{ display:table-cell; width:70%; } 
 	.shortFilmRight{ 
-		display:table-cell; width:30%; vertical-align:middle; color:$mainGreen; 
-		h3{ margin:10px 0; @include respond-fonts(40px); }
-		@include respond-fonts(28px); text-align: center;
+		color:$mainGreen; padding:10px 0 40px 0; max-width: 450px; margin:0 auto;
+		h3{ margin:10px 0; @include respond-fonts($fontSize1); }
+		@include respond-fonts($fontSize2); text-align: center;
 		@include respond-to(mobile){ padding:20px 0 40px 0; }
 	}
 	.shortFilmLeft, .shortFilmRight{
@@ -652,16 +686,21 @@ $newsColor : rgb(238,79,146);
 	}
 }
 .footer{
-	background-color:$footerGrey; 
+	background-color:$footerGrey; position:relative;
+	.backToTop{ 
+		width:93px; height:68px; z-index:101; bottom:20px; right:0; cursor: pointer;
+		background-image: url(../images/btn_backtotop_green.png); position:absolute; 
+	}
 	.fw-button{
 		border-bottom:1px solid $mainGreen; color:$mainGreen; text-align: center; position:relative;
-		text-transform: uppercase; font-size:20px;
+		text-transform: uppercase; @include respond-fonts($fontSize4); cursor: pointer;
 		.icon-11b-left{ position:absolute; right:30px; top:25px; }
-		.txt{ padding:20px 0; cursor: pointer; }
+		.txt{ padding:20px 0; }
 		.footerSlide{ 
 			padding-bottom:40px; display:none;
 			.socialLogo{
-				margin:40px 0 0 0; color:#bec9cd; font-size:20px;
+				margin:40px 0 0 0; color:#bec9cd; @include respond-fonts($fontSize3);
+				a{ color:#bec9cd; text-decoration: none; }
 				.icon{ 
 					padding:15px 25px; border-left:1px solid #FFF; @extend .animation;
 					&.icon-twitter-alt{ border:none; }
@@ -680,9 +719,10 @@ $newsColor : rgb(238,79,146);
 	}
 	.lower{
 		height:140px; background-repeat: no-repeat; background-position:center 25px;
-		font-size:12px; color:$mainGreen; overflow: hidden;
+		@include respond-fonts($fontSize5); color:$mainGreen; overflow: hidden;
 		@include respond-to(mobile){ height:auto; padding-top:140px; }
 		.leftFooter{ 
+			a{ color:$mainGreen; text-decoration: none; }
 			float:left; line-height: 205px;
 			span{ margin:0 10px; }
 		}
@@ -696,12 +736,12 @@ $newsColor : rgb(238,79,146);
 	}
 }
 .privacy, .terms{ 
-	width:80%; margin:0 auto; background-color:#FFF; font-size:14px;
+	width:80%; margin:0 auto; background-color:#FFF; @include respond-fonts($fontSize4);
 	padding-bottom:40px; position:relative; display:none;
-	li{ list-style-position: inside; }
+	ul{ padding-left:30px; }
 	.sub{ padding-left:30px; }
 	.close{ position:absolute; top:10px; color:$mainGreen; cursor:pointer; }
-	.termsTitle{ text-align: center; padding:20px 0; color:$mainGreen; font-size: 20px; }
+	.termsTitle{ text-align: center; padding:20px 0; color:$mainGreen; @include respond-fonts($fontSize3); }
 	.termsLeft{ width:31%; margin-right:2%; float:left; }
 	.termsMiddle{ width:31%; margin-right:2%; float:left; }
 	.termsRight{ width:33%; float:left; }
@@ -709,5 +749,5 @@ $newsColor : rgb(238,79,146);
 
 #privacyCaller, #termsCaller{ 
 	cursor:pointer; 
-	&.active{ border-bottom:2px solid $homeColor; }
+	&.active{ border-bottom:2px solid $mainGreen; }
 }

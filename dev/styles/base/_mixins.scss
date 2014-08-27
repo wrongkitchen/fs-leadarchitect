@@ -40,29 +40,29 @@
 
 @mixin respond-fonts($fontsize){
     font-size: $fontsize;
-    @if $fontsize == 48px{
-        @include respond-to(mobile){
-            font-size: 36px;
-        }
-    } 
-    @else if $fontsize == 40px{
+    @if $fontsize == $fontSize1{
         @include respond-to(mobile){
             font-size: 32px;
         }
-    }
-    @else if $fontsize == 36px{
-        @include respond-to(mobile){
-            font-size: 28px;
-        }
-    }
-    @else if $fontsize == 28px{
-        @include respond-to(mobile){
-            font-size: 22px;
-        }
-    }
-    @else if $fontsize == 24px{
+    } 
+    @else if $fontsize == $fontSize2{
         @include respond-to(mobile){
             font-size: 18px;
+        }
+    }
+    @else if $fontsize == $fontSize3{
+        @include respond-to(mobile){
+            font-size: 14px;
+        }
+    }
+    @else if $fontsize == $fontSize4{
+        @include respond-to(mobile){
+            font-size: 12px;
+        }
+    }
+    @else if $fontsize == $fontSize5{
+        @include respond-to(mobile){
+            font-size: 10px;
         }
     }
 }
