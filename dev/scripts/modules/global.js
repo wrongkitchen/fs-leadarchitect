@@ -154,7 +154,7 @@ define(function (require) {
                 var scrollTop = $(window).scrollTop() || document.documentElement.scrollTop;
                 var curPage = scrollTop / $(window).height();
                 var offset = (curPage - Math.floor(curPage)) * 100;
-                var addClass = ($(window).height() - scrollTop) < 800;
+                var addClass = ($(window).height() - scrollTop) < 600;
                 if(addClass){
                     if($('#nav').hasClass('active')){
                         $('#nav').addClass('active');

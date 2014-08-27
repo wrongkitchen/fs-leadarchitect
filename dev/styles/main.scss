@@ -693,7 +693,7 @@ $newsColor : rgb(238,79,146);
 	}
 	.fw-button{
 		border-bottom:1px solid $mainGreen; color:$mainGreen; text-align: center; position:relative;
-		text-transform: uppercase; @include respond-fonts($fontSize4); cursor: pointer;
+		@include respond-fonts($fontSize4); cursor: pointer;
 		.icon-11b-left{ position:absolute; right:30px; top:25px; }
 		.txt{ padding:20px 0; }
 		.footerSlide{ 
