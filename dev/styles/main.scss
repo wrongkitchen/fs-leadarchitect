@@ -103,14 +103,17 @@ $newsColor : rgb(238,79,146);
 	}
 	&.thirdPage, &.subPage{
 		.fw-banner{
-			height:100%; background:$mainGreen; min-height:initial; position:relative;
+			height:100%; background:$mainGreen; min-height:initial; position:relative; 
+			@include respond-to(mobile){
+				padding-top:120px;
+			}
 			.icon{ 
 				width:50px; position:absolute; z-index:10; @include respond-fonts($fontSize1);
 				@include respond-to(mobile){ width:40px; }
 				a{ color:$mainGreen; text-decoration: none; }
 				&.icon-x-1{ 
 					left:0; top:10px; text-align: right; 
-					@include respond-to(mobile){ display:none; }
+					@include respond-to(mobile){ top:125px; font-size:25px; }
 				}
 				&.icon-10b-right{ 
 					top:10px; right:0; text-align: left;
@@ -119,14 +122,15 @@ $newsColor : rgb(238,79,146);
 				}
 				&.icon-11b-left{ top:70px; right:0; text-align: left; padding-top:10px; }
 				&.icon-10b-right, &.icon-11b-left{
-					@include respond-to(mobile){ top:60%; border:none; }
+					@include respond-to(mobile){ top:65%; border:none; font-size:25px; }
 				}
 			}
 			.txt-container{ 
-				height:auto; padding:20px 0; 
+				height:auto; padding:20px 0; @include respond-fonts($fontSize2);
 				.title{ text-align: center; }
 				.subTitle{ 
 					@include respond-fonts($fontSize3); max-width:500px; text-align: center; margin:10px auto 20px auto; 
+					&#workTypeDesc{ max-width: 510px; }
 					.small{ @include respond-fonts($fontSize4); }
 				}
 			}
@@ -142,21 +146,31 @@ $newsColor : rgb(238,79,146);
 		.fw-banner{
 			.icon{ color:$homeColor; }
 		}
-		#nav{ background:#06171f; }
+		#nav{ 
+			background:#003752; 
+			&.active{ background: rgba(0,55,82,.8); }
+		}
 	}
 	&.thirdPage{ 
 		.fw-banner{
 			background:#FFF; color:$mainGreen; 
 			.icon{ color:$mainGreen; border-bottom: 1px solid #eee; }
 		}
-		#nav{ background:$mainGreen; }
+		#nav{ 
+			background:$mainGreen; 
+			.menu{ 
+				top:45px; 
+			}
+			&.active{ 
+				.menu{ top:15px; }
+			}
+		}
 	}
 	&.mobileShow{
 		#nav{
 	    	@include respond-to(mobile){
 		    	background-color:$mainGreen; height:320px;
 		    	.navLeft, .navRight{ display:block; } 
-		    	&.active{ background:transparent; }
 				.logo{ position:absolute; top:0; left:50%; margin-left:-43px; }
 				.navLeft, .navRight{ 
 					float:none; width:100%; position:relative; padding:0;
@@ -197,9 +211,10 @@ $newsColor : rgb(238,79,146);
     text-align:center; width:100%; background-color:transparent;
     .container{ max-width:700px; margin-bottom:10px; }
     .backToTop{ 
-    	width:100px; height:20px; color:#FFF; @include respond-fonts($fontSize5); font-weight: bold; z-index:10; 
-    	position:absolute; right:0; bottom:26px; cursor:pointer; display:none;
+    	width:100px; color:#FFF; @include respond-fonts($fontSize5); font-weight: bold; z-index:10; 
+    	position:absolute; right:0; top:50%; cursor:pointer; display:none; margin-top: -5px;
     }
+    .mountContainer{ position:relative; width:100%; height:100%; }
 	.navLeft{ float: left; width:40%; position:absolute; left:0; top:0; }
 	.navRight{ float: right; width:40%; position:absolute; right:0; top:0; }
     .navButton{ 
@@ -223,13 +238,19 @@ $newsColor : rgb(238,79,146);
     	@include respond-to(mobile){ display:none; }
     }
     .menu{ 
-    	position: absolute; right:20px; color:#FFF; top:50px; display:none; @include respond-fonts($fontSize1); cursor:pointer;
-    	@include respond-to(mobile){ display:block; }
+    	position: absolute; right:20px; color:#FFF; top:45px; display:none; z-index:50;
+    	@include respond-fonts($fontSize1); cursor:pointer;
+    	@include respond-to(mobile){ display:block; top:15px; }
     }
     .logo{ padding-bottom:5px; text-align:center; display:inline-block; border-bottom:2px solid $homeColor; }
     &.active{ 
     	background-color:$mainGreenAlpha; padding:15px 0; position:fixed;
-    	.backToTop{ display: block; }
+    	@include respond-to(mobile){ height:30px; }
+    	.menu{ top:2px; }
+    	.backToTop{ 
+    		display: block; 
+    		@include respond-to(mobile){ display:none; }
+    	}
     	.navLeft, .navRight{ padding-top:10px; } 
     	.logo{
     		height:12px;
@@ -270,12 +291,18 @@ $newsColor : rgb(238,79,146);
 		width:auto; margin:0 auto; 
 		@include respond-to(mobile){ width:100%; }
 	}
-	&#latestNews{ margin-bottom:120px; }
+	&#latestNews{ 
+		margin-bottom:120px; 
+		.newsNode{
+			.newsDesc{ @include respond-fonts($fontSize3); }
+		}
+	}
 	&#workThirdPage{ padding-bottom:150px; }
 	&#contact{ 
 		padding:60px 0px 60px 0; 
 		.googleMapOwl{
 			.owl-pagination{ display:none; }
+			.owl-prev, .owl-next{ font-size:25px; }
 		}
 		.googlemap{ 
 			position:relative; width:80%; margin:0 auto;
@@ -283,9 +310,9 @@ $newsColor : rgb(238,79,146);
 			.overlay{ width:100%; height:100%; z-index:10; position:absolute; z-index:10; }
 			iframe{ z-index:1; }
 			.address{ 
-				width:400px; margin:20px auto;
+				width:400px; margin:25px auto; @include respond-fonts($fontSize3);
 				@include respond-to(mobile){
-					float:none; margin:0 auto; width:100%;
+					float:none; width:100%;
 				}
 			}
 		}  
@@ -305,9 +332,9 @@ $newsColor : rgb(238,79,146);
 		a{ text-decoration: none; }
 		.worksLeft, .worksRight{ 
 			width:49%;
-			.title{ margin:50px 0 30px 0; }
+			.title{ margin:50px 0 30px 0; @include respond-fonts($fontSize2); }
 			.border{ border-bottom:1px solid $workColor; width:150px; height:1px; margin:0 auto; }
-			.worksDesc{ @include respond-fonts($fontSize2); color:$mainGreen; margin:30px 0; padding:0 30px; }
+			.worksDesc{ @include respond-fonts($fontSize3); color:$mainGreen; margin:30px 0; padding:0 30px; }
 		}
 		.worksLeft{ margin:0 auto 50px auto; }
 		.worksRight{ margin:0 auto 120px auto; }
@@ -330,7 +357,7 @@ $newsColor : rgb(238,79,146);
 		}
 		.whatwedo{ 
 			margin:0 auto 60px auto; 
-			.whatwedo-txt{ width:80%; max-width:400px; margin:0 auto 20px auto; }
+			.whatwedo-txt{ width:80%; max-width:400px; margin:0 auto 20px auto; @include respond-fonts($fontSize3); }
 		}
 		.bottomBanner{ 
 			background-image:url(../images/banner_work2.jpg); 
@@ -367,7 +394,6 @@ $newsColor : rgb(238,79,146);
 						opacity: 1; color:$mainGreen;
 					}
 					.name{ 
-						padding-top:80px; 
 						@include respond-fonts($fontSize2);
 						@include respond-to(mobile){ padding-top:10px; }; 
 					}
@@ -391,13 +417,13 @@ $newsColor : rgb(238,79,146);
 	}
 	&#workThirdPage{
 		.mountWidthImage{ width:100%; }
-		.projectTitle{ width:60%; margin:40px auto; }
-		.projectWrapper{ width:100%; max-width: 700px; margin:0 auto; }
+		.projectTitle{ width:60%; margin:40px auto; @include respond-fonts($fontSize2); }
+		.projectWrapper{ width:100%; max-width: 960px; margin:0 auto; }
 		.projectLeft{ 
-			width:29%; margin-right:2%; text-align: left; float:right; @include respond-fonts($fontSize4);
+			width:29%; margin-right:2%; text-align: left; float:right; @include respond-fonts($fontSize5);
 			.txt{ padding-right:10%; }
 		}
-		.projectRight{ width:69%; float:right; @include respond-fonts($fontSize2); text-align: left; }
+		.projectRight{ width:69%; float:right; @include respond-fonts($fontSize4); text-align: left; }
 		.projectLeft, .projectRight{ 
 			border-top:1px solid #e38025; padding:40px 0; 
 			ul{ padding-left:30px; margin-top:20px; }
@@ -412,7 +438,7 @@ $newsColor : rgb(238,79,146);
 			text-align: center; margin:70px 0;
 			.subNavBtn{ 
 				display:inline-block; margin:0 30px 20px 30px; cursor:pointer;
-				border-bottom:2px solid #FFF;
+				border-bottom:2px solid #FFF; @include respond-fonts($fontSize4);
 				&:hover, &.active{ border-bottom:2px solid #cb3362; }
 			}
 		}
@@ -420,12 +446,12 @@ $newsColor : rgb(238,79,146);
 			width:80%; margin:0 auto 40px auto; 
 			img{ width:100%; }
 			.date-type{
-				@include respond-fonts($fontSize3); margin-top:10px;
+				@include respond-fonts($fontSize5); margin-top:10px;
 				.date{ float:left; }
 				.type{ float:right; }
 			}
-			.title{ margin:20px 0; }
-			.introDesc{ width:80%; max-width:400px; margin:0 auto; }
+			.title{ margin:20px 0; @include respond-fonts($fontSize3); }
+			.introDesc{ width:80%; max-width:400px; margin:0 auto; @include respond-fonts($fontSize4); }
 			.btn{ margin:20px auto; }
 			hr{ padding:0 20px; }
 		}
@@ -474,7 +500,7 @@ $newsColor : rgb(238,79,146);
 				.txt{ 
 					width:100%; background-color: $mainGreen; 
 					border-bottom:1px solid #d7d32b; 
-					text-align: center; @include respond-fonts($fontSize2);
+					text-align: center; @include respond-fonts($fontSize3);
 					color: #FFF; line-height: 90px; text-transform: uppercase;
 				}
 				.icon-11b-left{ 
@@ -489,18 +515,18 @@ $newsColor : rgb(238,79,146);
 				}
 			}
 			.about-content{
-				padding-bottom:30px;
+				padding-bottom:30px; @include respond-fonts($fontSize3);
 				.lineBlock{ width:80%; margin: 0 auto; height:1px; border-bottom:1px solid $aboutColor; }
-				.title{ @include respond-fonts($fontSize2); margin:30px 0; }
+				.title{ @include respond-fonts($fontSize3); margin:30px 0; }
 				.about-desc{ width:60%; max-width:450px; margin:20px auto; }
 			}
 			&#aboutJoin{
 				.about-desc{
-					border-bottom:1px solid #d7d32b; padding-bottom:30px;
+					border-bottom:1px solid #d7d32b; padding-bottom:30px; @include respond-fonts($fontSize3);
 					.greyBlock{ 
 						text-align: center; background-color:$footerGrey; 
 						margin-top:40px; padding-bottom:30px; display:none;
-						.txt{ padding:30px 30px 0px 30px; color:$mainGreen; }
+						.txt{ padding:30px 30px 0px 30px; color:$mainGreen; @include respond-fonts($fontSize5); }
 						.btnWrapper{ padding:30px 0 0 0; }
 					}
 					&.small{ @include respond-fonts($fontSize4); }
@@ -517,11 +543,12 @@ $newsColor : rgb(238,79,146);
 				.btnWrapper{ padding:30px 0; }
 			}
 			&#aboutStudio{
-				.location{ padding:40px 0; color:$mainGreen; font-family: 'BrownBold', Arial, sans-serif; }
+				.location{ padding:40px 0; color:$mainGreen; font-family: 'BrownBold', Arial, sans-serif; @include respond-fonts($fontSize3); }
 				hr{ width:80%; margin:0 auto; }
 				.about-desc{ padding:20px 0; }
 				.about-content{ padding:0; }
 				.owl{ padding-bottom:30px; }
+				.owl-prev, .owl-next{ display:none; } 
 			}
 			&#aboutPeople{
 				.peopleGallery{ padding-bottom:100px; }
@@ -536,7 +563,7 @@ $newsColor : rgb(238,79,146);
 						margin-bottom:10px; text-align: left; 
 					}
 					.about-slide-people{ 
-						width:15%; display:inline-block; margin-right:1%; position:relative;
+						width:15%; display:inline-block; margin-right:1%; position:relative; overflow: hidden;
 						.name{ 
 							position:absolute; top:0; left:0; width:100%; height:180px; 
 							text-align: center; color:#FFF; opacity: 0; @extend .animation;
@@ -568,7 +595,7 @@ $newsColor : rgb(238,79,146);
 					.icon-x-1{ width:60px; text-align: center; color:#8a8888; }
 				}
 				.about-slide-title{ 
-					width:60%; margin:40px auto; @include respond-fonts($fontSize2);
+					width:60%; margin:40px auto; @include respond-fonts($fontSize3);
 					color:$mainGreen;
 				}
 				.aboutLeft{ 
@@ -591,12 +618,13 @@ $newsColor : rgb(238,79,146);
 					.aboutRight{ 
 						.txt{ padding:40px 0 0 0; margin:40px 0; } 
 					}
-					.aboutLeft, .aboutRight{ float:none; width:80%; margin:0 auto; padding:0; }
+					.aboutLeft, .aboutRight{ float:none; width:80%; margin:0 auto; padding:0; @include respond-fonts($fontSize3); }
 				}
+				.icon-x-1{ font-size: 25px; }
 				.pagination{ 
 					width:100%; margin-bottom:40px;
-					.pagin-left, .pagin-right{ width:6%; }
-					.page{ width:88%; color:$mainGreen; line-height: normal; }
+					.pagin-left, .pagin-right{ width:6%; font-size:25px; }
+					.page{ width:88%; color:$mainGreen; line-height: normal; @include respond-fonts($fontSize3); }
 				}
 			}
 		}
@@ -669,12 +697,12 @@ $newsColor : rgb(238,79,146);
 	}
 }
 .shortFilm{ 
-	background-color:#e9e7e6; margin:30px 0px; 
+	background-color:#e9e7e6; margin:50px 0px; 
 	.shortFilmRight{ 
 		color:$mainGreen; padding:10px 0 40px 0; max-width: 450px; margin:0 auto;
-		h3{ margin:10px 0; @include respond-fonts($fontSize1); }
-		@include respond-fonts($fontSize2); text-align: center;
+		@include respond-fonts($fontSize3); text-align: center;
 		@include respond-to(mobile){ padding:20px 0 40px 0; }
+		h3{ margin:10px 0; @include respond-fonts($fontSize2); }
 	}
 	.shortFilmLeft, .shortFilmRight{
 		@include respond-to(mobile){

@@ -175,12 +175,12 @@ define(function (require) {
                 });
 
                 $('.scrollUp').each(function(){
-                    if(!$(this).hasClass('active')){
+                    // if(!$(this).hasClass('active')){
                         if($(window).scrollTop() - $(this).offset().top >= -$(window).height())
                             $(this).addClass('active');
                         else
                             $(this).removeClass('active');
-                    }
+                    // }
                 });
             };
             checkNavStatus();
