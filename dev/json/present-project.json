@@ -21,10 +21,10 @@
 		"location" : "Beijing"
 	},
 	{ 
-		"href" : "projects/penang-sentral.html",
+		"href" : "projects/mixed_use_project.html",
 		"thumbnail_normal" : "images/work/projects/present/Penang-Sentral.jpg",
 		"thumbnail_active" : "images/work/projects/present/Penang-Sentral.jpg",
-		"name" : "Penang Sentral",
+		"name" : "Mixed Use Project (TOD)",
 		"location" : "Asia"
 	},
 	{ 
@@ -38,7 +38,7 @@
 		"href" : "projects/uem-riverwalk.html",
 		"thumbnail_normal" : "images/work/projects/present/UEM-Riverwalk.jpg",
 		"thumbnail_active" : "images/work/projects/present/UEM-Riverwalk.jpg",
-		"name" : "Riverwalk",
+		"name" : "Mixed Use Masterplan",
 		"location" : "Asia"
 	},
 	{ 
@@ -47,5 +47,26 @@
 		"thumbnail_active" : "images/work/projects/present/Zhuhai-Ribbon.jpg",
 		"name" : "Zhuhai Ribbon",
 		"location" : "Zhuhai"
+	},
+	{ 
+		"href" : "projects/hanking-retail.html",
+		"thumbnail_normal" : "images/work/projects/present/Hanking-Retail.jpg",
+		"thumbnail_active" : "images/work/projects/present/Hanking-Retail.jpg",
+		"name" : "Project for Hanking Group",
+		"location" : "PRC"
+	},
+	{ 
+		"href" : "projects/harbin-dept-store.html",
+		"thumbnail_normal" : "images/work/projects/present/Harbin-Dept-Store.jpg",
+		"thumbnail_active" : "images/work/projects/present/Harbin-Dept-Store.jpg",
+		"name" : "Song Lei Department Store",
+		"location" : "Harbin"
+	},
+	{ 
+		"href" : "projects/taipei-dept-store.html",
+		"thumbnail_normal" : "images/work/projects/present/Taipei-Dept-Store.jpg",
+		"thumbnail_active" : "images/work/projects/present/Taipei-Dept-Store.jpg",
+		"name" : "Taipei IFG",
+		"location" : "Taipei"
 	}
 ]

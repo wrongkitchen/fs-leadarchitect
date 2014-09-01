@@ -416,9 +416,9 @@ $newsColor : rgb(238,79,146);
 		}
 	}
 	&#workThirdPage{
-		.mountWidthImage{ width:100%; }
-		.projectTitle{ width:60%; margin:40px auto; @include respond-fonts($fontSize2); }
-		.projectWrapper{ width:100%; max-width: 960px; margin:0 auto; }
+		.mountWidthImage{ width:100%; max-width:700px;}
+		.projectTitle{ width:60%; margin:40px auto; @include respond-fonts($fontSize2); max-width:700px;}
+		.projectWrapper{ width:100%; max-width: 700px; margin:0 auto; }
 		.projectLeft{ 
 			width:29%; margin-right:2%; text-align: left; float:right; @include respond-fonts($fontSize5);
 			.txt{ padding-right:10%; }

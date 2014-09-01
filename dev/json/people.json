@@ -12,16 +12,22 @@
 		"href" : "people/alex_brazier.html"
 	},
 	{ 
-		"name" : "Anthony Kwok",
+		"name" : "Antony Kwok",
 		"position" : "Technical Associate",
 		"img" : "AnthonyK__DSF6495_Colour_B&W.png",
-		"href" : "people/anthony_kwok.html"
+		"href" : "people/antony_kwok.html"
 	},
 	{ 
 		"name" : "Bo Ng",
 		"position" : "Senior Interior Designer",
 		"img": "BoN__DSF6447_Colour_B&W.png",
 		"href" : "people/bo_ng.html"
+	},
+	{ 
+		"name" : "Chin Yong Ng",
+		"position" : "Senior Associate Director",
+		"img": "CY__DSF6414_Colour_B&W.png",
+		"href" : "people/cy_ng.html"
 	},
 	{ 
 		"name" : "Chris Lohan",
@@ -42,12 +48,6 @@
 		"href" : "people/claude_touikan.html"
 	},
 	{ 
-		"name" : "CY Ng",
-		"position" : "",
-		"img": "CY__DSF6414_Colour_B&W.png",
-		"href" : "people/cy_ng.html"
-	},
-	{ 
 		"name" : "David Buffonge",
 		"position" : "Director",
 		"img": "DavidB__DSF6507_Colour_B&W.png",
@@ -61,7 +61,7 @@
 	},
 	{ 
 		"name" : "Hon Fung Lee",
-		"position" : "DIRECTOR",
+		"position" : "Interior Designer",
 		"img": "Fung__DSF6453_Colour_B&W.png",
 		"href" : "people/hon_fung_lee.html"
 	},
@@ -82,6 +82,12 @@
 		"position" : "Associate Director",
 		"img": "KenjiW__DSF6468_Colour_B&W.png",
 		"href" : "people/kenji_wong.html"
+	}	,
+	{ 
+		"name" : "Kevin Hau",
+		"position" : "IT Manager",
+		"img": "Kevin_DSF6581_Colour_B&W.jpg",
+		"href" : "people/kevin_hau.html"
 	},
 	{ 
 		"name" : "Meeta Patel",
@@ -108,10 +114,22 @@
 		"href" : "people/raymond_chu.html"
 	},
 	{ 
+		"name" : "Richard Lee",
+		"position" : "Senior Associate Director",
+		"img": "RichardL_DSF6079-Colour_B&W.jpg",
+		"href" : "people/richard_lee.html"
+	},
+	{ 
 		"name" : "Ricky Tsang",
 		"position" : "Architectural Designer",
 		"img": "RickyT__DSF6472_Colour_B&W.png",
 		"href" : "people/ricky_tsang.html"
+	},
+	{ 
+		"name" : "Sandy Fong",
+		"position" : "Office Assistant",
+		"img": "Sandy__DSF6517_Colour_B&W.jpg",
+		"href" : "people/sandy_fong.html"
 	},
 	{ 
 		"name" : "Simon Blore",
@@ -142,6 +160,12 @@
 		"position" : "Summer Intern (architecture)",
 		"img": "Tiffany__DSF6493_Colour_B&W.png",
 		"href" : "people/tiffany_chan.html"
+	},
+	{ 
+		"name" : "Wesley Louie",
+		"position" : "Senior Associate Director",
+		"img": "WesleyL_DSF6533_Colour_B&W.jpg",
+		"href" : "people/wesley_louie.html"
 	},
 	{ 
 		"name" : "Wisely Suen",
