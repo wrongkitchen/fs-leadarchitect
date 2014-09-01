@@ -129,7 +129,7 @@ $newsColor : rgb(238,79,146);
 				height:auto; padding:20px 0; @include respond-fonts($fontSize2);
 				.title{ text-align: center; }
 				.subTitle{ 
-					@include respond-fonts($fontSize3); max-width:500px; text-align: center; margin:10px auto 20px auto; 
+					@include respond-fonts($fontSize3); max-width:700px; text-align: center; margin:10px auto 20px auto; 
 					&#workTypeDesc{ max-width: 510px; }
 					.small{ @include respond-fonts($fontSize4); }
 				}
@@ -147,7 +147,7 @@ $newsColor : rgb(238,79,146);
 			.icon{ color:$homeColor; }
 		}
 		#nav{ 
-			background:#003752; 
+			background:#264c59; 
 			&.active{ background: rgba(0,55,82,.8); }
 		}
 	}
@@ -157,7 +157,7 @@ $newsColor : rgb(238,79,146);
 			.icon{ color:$mainGreen; border-bottom: 1px solid #eee; }
 		}
 		#nav{ 
-			background:$mainGreen; 
+			background:rgba(0,55,82,.8); 
 			.menu{ 
 				top:45px; 
 			}
