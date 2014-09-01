@@ -148,7 +148,7 @@ $newsColor : rgb(238,79,146);
 		}
 		#nav{ 
 			background:#264c59; 
-			&.active{ background: rgba(0,55,82,.8); }
+			&.active{ background:rgba(38, 76, 89, 0.8); /* background: rgba(0,55,82,.8);*/ }
 		}
 	}
 	&.thirdPage{ 
@@ -157,7 +157,8 @@ $newsColor : rgb(238,79,146);
 			.icon{ color:$mainGreen; border-bottom: 1px solid #eee; }
 		}
 		#nav{ 
-			background:rgba(0,55,82,.8); 
+			/*background:rgba(0,55,82,.8); */
+			background:rgba(38, 76, 89, 0.8);
 			.menu{ 
 				top:45px; 
 			}
@@ -288,7 +289,7 @@ $newsColor : rgb(238,79,146);
 	.smTitle{ @include respond-fonts($fontSize2); }
 	.mountWidthImage{ width:80%; margin:0 auto; max-width:$tabletMaxWidth; }
 	.mountHeightImage{ 
-		width:auto; margin:0 auto; 
+		width:auto; margin:0 auto; max-width:700px;
 		@include respond-to(mobile){ width:100%; }
 	}
 	&#latestNews{ 
