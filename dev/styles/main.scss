@@ -538,7 +538,7 @@ $newsColor : rgb(238,79,146);
 					}
 				}
 				.greyBanner{ 
-					width:100%; @include respond-fonts($fontSize2); color:$mainGreen; text-align: center;
+					width:100%; @include respond-fonts($fontSize3); color:$mainGreen; text-align: center;
 					background-color:$footerGrey; padding:30px 0;
 				}
 				.btnWrapper{ padding:30px 0; }
