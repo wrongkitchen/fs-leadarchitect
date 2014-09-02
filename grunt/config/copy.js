@@ -17,6 +17,7 @@ module.exports = function(grunt) {
                     'images/**',
                     'people/**',
                     'projects/**',
+                    'news/**',
                     'json/**',
                     'styles/fonts/**/*.{woff,otf,ttf,eot,svg}',
                     '*.html'
@@ -33,6 +34,7 @@ module.exports = function(grunt) {
                     '*.html',
                     'people/**',
                     'projects/**',
+                    'news/**',
                     'scripts/modules/inline-*.*',
                     '!*.js',
                     '*.{ico,png,txt,html}',
