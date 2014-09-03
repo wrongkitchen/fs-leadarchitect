@@ -637,7 +637,10 @@ $newsColor : rgb(238,79,146);
 }
 .btn{
 	display:inline-block; text-transform: uppercase; cursor:pointer; @extend .animation;
-	&.detail{ color:$mainGreen; @include respond-fonts($fontSize5); padding:5px 30px; border:1px solid $mainGreen; }
+	&.detail{ color:$mainGreen; @include respond-fonts($fontSize5); padding:5px 30px; border:1px solid $mainGreen; 
+		a{color:$mainGreen;}
+	}
+
 }
 
 #aboutPeopleOwl, .owl{
