@@ -19,7 +19,7 @@ define(function (require) {
                 }
             };
 
-            $('#nav>.backToTop').on('click', function(){
+            $('#nav .backToTop').on('click', function(){
                 $(window).scrollTo(0, 800);
             });
 
