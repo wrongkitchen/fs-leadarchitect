@@ -112,7 +112,7 @@ $newsColor : rgb(238,79,146);
 				@include respond-to(mobile){ width:40px; }
 				a{ color:$mainGreen; text-decoration: none; }
 				&.icon-x-1{ 
-					left:0; top:10px; text-align: right; 
+					left:0; top:22px; text-align: right; 
 					@include respond-to(mobile){ top:125px; font-size:25px; }
 				}
 				&.icon-10b-right{ 
@@ -126,7 +126,7 @@ $newsColor : rgb(238,79,146);
 				}
 			}
 			.txt-container{ 
-				height:auto; padding:20px 0; @include respond-fonts($fontSize2);
+				height:auto; padding:20px 0; @include respond-fonts($fontSize2);min-height:105px;
 				.title{ text-align: center; }
 				.subTitle{ 
 					@include respond-fonts($fontSize3); max-width:700px; text-align: center; margin:10px auto 20px auto; 
