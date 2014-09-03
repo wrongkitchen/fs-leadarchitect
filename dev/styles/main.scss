@@ -440,6 +440,7 @@ $newsColor : rgb(238,79,146);
 			.subNavBtn{ 
 				display:inline-block; margin:0 30px 20px 30px; cursor:pointer;
 				border-bottom:2px solid #FFF; @include respond-fonts($fontSize4);
+				a {color:$mainGreen}
 				&:hover, &.active{ border-bottom:2px solid #cb3362; }
 			}
 		}
@@ -765,6 +766,10 @@ $newsColor : rgb(238,79,146);
 		.leftFooter, .rightFooter{
 			@include respond-to(mobile){ float:none; line-height: normal; text-align: center; }	
 		}
+	}
+	#result{
+		display:none; 
+		margin: 20px auto;
 	}
 }
 .privacy, .terms{ 
