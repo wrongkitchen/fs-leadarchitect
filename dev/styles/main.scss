@@ -157,12 +157,14 @@ $newsColor : rgb(238,79,146);
 			.icon{ color:$mainGreen; border-bottom: 1px solid #eee; }
 		}
 		#nav{ 
-			/*background:rgba(0,55,82,.8); */
-			background:rgba(38, 76, 89, 0.8);
+			/*background:rgba(0,55,82,.8);*/
+			background:rgba(38, 76, 89, 1);	
+			/*background:rgba(38, 76, 89, 0.8);*/
 			.menu{ 
 				top:45px; 
 			}
 			&.active{ 
+				background:rgba(38, 76, 89, 0.8);
 				.menu{ top:15px; }
 			}
 		}
@@ -213,7 +215,7 @@ $newsColor : rgb(238,79,146);
     .container{ max-width:700px; }
     .backToTop{ 
     	width:100px; color:#FFF; @include respond-fonts($fontSize5); font-weight: bold; z-index:10; 
-    	position:absolute; right:0; top:50%; cursor:pointer; display:none; margin-top: -8px;
+    	position:absolute; right:0; top:50%; cursor:pointer; display:none; margin-top: -7px;
     }
     .mountContainer{ position:relative; width:100%; height:100%; }
 	.navLeft{ float: left; width:40%; position:absolute; left:0; top:0; }
@@ -294,8 +296,18 @@ $newsColor : rgb(238,79,146);
 	}
 	&#latestNews{ 
 		margin-bottom:120px; 
-		.newsNode{
-			.newsDesc{ @include respond-fonts($fontSize3); }
+		.newsNode{ 
+			width:80%; margin:0 auto 40px auto; max-width:960px;
+			img{ width:100%; }
+			.date-type{
+				@include respond-fonts($fontSize5); margin-top:10px;
+				.date{ float:left; }
+				.type{ float:right; }
+			}
+			.title{ margin:20px 0; @include respond-fonts($fontSize3); }
+			.introDesc{ width:80%; /*max-width:400px;*/ margin:0 auto; @include respond-fonts($fontSize4); }
+			.btn{ margin:20px auto; }
+			hr{ padding:0 20px; }
 		}
 	}
 	&#workThirdPage{ padding-bottom:150px; }
