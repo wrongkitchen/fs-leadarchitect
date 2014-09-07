@@ -57,7 +57,9 @@ $newsColor : rgb(238,79,146);
 		#nav .logo{ border-bottom:2px solid $homeColor; }
 		.owl .owl-controls .owl-pagination .owl-page.active span{ color:$homeColor; }
 		.footer{
-			.lower{ background-image:url(../images/logo_footer_home.png); }
+			.lower{ 
+				@include retina('../images/logo_footer_home.png', '../images/logo_footer_home-retaina.png', 88px, 89px);
+			}
 		}
 	} 
 	&.contact{
@@ -65,7 +67,9 @@ $newsColor : rgb(238,79,146);
 		#nav .logo{ border-bottom:2px solid $contactColor; }
 		.owl .owl-controls .owl-pagination .owl-page.active span{ color:$contactColor; }
 		.footer{
-			.lower{ background-image:url(../images/logo_footer_contact.png); }
+			.lower{ 
+				@include retina('../images/logo_footer_contact.png', '../images/logo_footer_contact-retaina.png', 88px, 89px);
+			}
 		}
 	} 
 	&.work{
@@ -79,7 +83,9 @@ $newsColor : rgb(238,79,146);
 		#nav .logo{ border-bottom:2px solid $workColor; }
 		.owl .owl-controls .owl-pagination .owl-page.active span{ color:$workColor; }
 		.footer{
-			.lower{ background-image:url(../images/logo_footer_work.png); }
+			.lower{ 
+				@include retina('../images/logo_footer_work.png', '../images/logo_footer_work-retaina.png', 88px, 89px);
+			}
 		}
 	}
 	&.news{
@@ -90,7 +96,9 @@ $newsColor : rgb(238,79,146);
 		#nav .logo{ border-bottom:2px solid $newsColor; }
 		.owl .owl-controls .owl-pagination .owl-page.active span{ color:$newsColor; }
 		.footer{
-			.lower{ background-image:url(../images/logo_footer_news.png); }
+			.lower{ 
+				@include retina('../images/logo_footer_news.png', '../images/logo_footer_news-retaina.png', 88px, 89px);
+			}
 		}
 	}
 	&.about{
@@ -98,7 +106,9 @@ $newsColor : rgb(238,79,146);
 		#nav .logo{ border-bottom:2px solid $aboutColor; }
 		.owl .owl-controls .owl-pagination .owl-page.active span{ color:$aboutColor; }
 		.footer{
-			.lower{ background-image:url(../images/logo_footer_about.png); }
+			.lower{ 
+				@include retina('../images/logo_footer_about.png', '../images/logo_footer_about-retaina.png', 88px, 89px);
+			}
 		}
 	}
 	&.thirdPage, &.subPage{
@@ -117,10 +127,10 @@ $newsColor : rgb(238,79,146);
 				}
 				&.icon-10b-right{ 
 					top:10px; right:0; text-align: left;
-					padding-top:10px;
+					padding-top:10px; padding-left:15px;
 					@include respond-to(mobile){ left:0; right:auto; }
 				}
-				&.icon-11b-left{ top:70px; right:0; text-align: left; padding-top:10px; }
+				&.icon-11b-left{ top:70px; right:0; text-align: left; padding-top:10px; padding-right:15px; }
 				&.icon-10b-right, &.icon-11b-left{
 					@include respond-to(mobile){ top:65%; border:none; font-size:25px; }
 				}
@@ -130,6 +140,7 @@ $newsColor : rgb(238,79,146);
 				.title{ text-align: center; }
 				.subTitle{ 
 					@include respond-fonts($fontSize3); max-width:700px; text-align: center; margin:10px auto 20px auto; 
+					@include respond-to(mobile){ max-width: 60%; }
 					&#workTypeDesc{ max-width: 510px; }
 					.small{ @include respond-fonts($fontSize4); }
 				}
@@ -641,7 +652,8 @@ $newsColor : rgb(238,79,146);
 				.pagination{ 
 					width:100%; margin-bottom:40px;
 					.pagin-left, .pagin-right{ width:6%; font-size:25px; }
-					.page{ width:88%; color:$mainGreen; line-height: normal; @include respond-fonts($fontSize3); }
+					.pagin-right{ padding-left:15px; }
+					.page{ width:80%; color:$mainGreen; line-height: normal; @include respond-fonts($fontSize3); }
 				}
 			}
 		}
@@ -797,6 +809,9 @@ $newsColor : rgb(238,79,146);
 	.termsLeft{ width:31%; margin-right:2%; float:left; }
 	.termsMiddle{ width:31%; margin-right:2%; float:left; }
 	.termsRight{ width:33%; float:left; }
+	.termsLeft, .termsMiddle, .termsRight{
+		@include respond-to(mobile){ width:100%; }	
+	}
 }
 
 #privacyCaller, #termsCaller{ 
