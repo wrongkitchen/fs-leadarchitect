@@ -263,7 +263,7 @@ $newsColor : rgb(238,79,146);
     	.menu{ top:2px; }
     	.backToTop{ 
     		display: block; 
-    		@include respond-to(mobile){ display:none; }
+    		@include respond-to(mobile){ right:auto; left:0; }
     	}
     	.navLeft, .navRight{ padding-top:0; } 
     	.logo{
