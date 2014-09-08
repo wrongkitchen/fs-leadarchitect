@@ -154,8 +154,12 @@ define(function (require) {
                 var scrollTop = $(window).scrollTop() || document.documentElement.scrollTop;
                 var curPage = scrollTop / $(window).height();
                 var offset = (curPage - Math.floor(curPage)) * 100;
-                console.log(offset);
-                var addClass = (offset) > 15;
+			/*	console.log("scrollTop :" + scrollTop);
+				console.log("window height :" +$(window).height());
+				console.log("curPage :" + curPage);
+               console.log("offset :"+offset);*/
+               // var addClass = (offset) > 15;
+			    var addClass = (curPage) > 0.2;
                 if(addClass){
                     if($('#nav').hasClass('active')){
                         $('#nav').addClass('active');
