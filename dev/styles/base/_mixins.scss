@@ -14,7 +14,15 @@
         clear: both;
     }
 }
-
+@mixin retina($url, $retinaUrl, $width, $height) {
+    background-image: url($url);
+    @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+        & {
+            background-image: url($retinaUrl);
+            -webkit-background-size: $width $height;
+        }
+    }
+}
 @mixin respond-to($media) {
     @if $media == mobile {
         @media screen and (max-width: $mobileMaxWidth) { 
