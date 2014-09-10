@@ -122,15 +122,15 @@ $newsColor : rgb(238,79,146);
 				@include respond-to(mobile){ width:40px; }
 				a{ color:$mainGreen; text-decoration: none; }
 				&.icon-x-1{ 
-					left:0; top:22px; text-align: right; 
-					@include respond-to(mobile){ top:125px; font-size:25px; }
+					left:0; top:22px; text-align: left; padding-left:21px;
+					@include respond-to(mobile){ /*top:125px;*/text-align:right; top:52%; font-size:25px; padding-left:0px; padding-right:10px;}
 				}
 				&.icon-10b-right{ 
-					top:10px; right:0; text-align: left;
-					padding-top:10px; padding-left:15px;
-					@include respond-to(mobile){ left:0; right:auto; }
+					top:10px; right:0px; text-align: right;
+					padding-top:10px; padding-right:15px;
+					@include respond-to(mobile){ left:0; text-align:left; right:auto; padding-left: 15px;}
 				}
-				&.icon-11b-left{ top:70px; right:0; text-align: left; padding-top:10px; padding-right:15px; }
+				&.icon-11b-left{ top:80px; right:0; text-align: right; padding-top:10px; padding-right:15px; }
 				&.icon-10b-right, &.icon-11b-left{
 					@include respond-to(mobile){ top:65%; border:none; font-size:25px; }
 				}
@@ -172,11 +172,12 @@ $newsColor : rgb(238,79,146);
 			background:rgba(38, 76, 89, 1);	
 			/*background:rgba(38, 76, 89, 0.8);*/
 			.menu{ 
-				top:45px; 
+				top:45px;
+				right:15px;
 			}
 			&.active{ 
 				background:rgba(38, 76, 89, 0.8);
-				.menu{ top:15px; }
+				.menu{ top:0px; }
 			}
 		}
 	}
@@ -185,14 +186,21 @@ $newsColor : rgb(238,79,146);
 	    	@include respond-to(mobile){
 		    	background-color:$mainGreen; height:320px;
 		    	.navLeft, .navRight{ display:block; } 
-				.logo{ position:absolute; top:0; left:50%; margin-left:-43px; }
+				.logo{ position:absolute; top:0px; left:50%; margin-left:-43px; }
 				.navLeft, .navRight{ 
 					float:none; width:100%; position:relative; padding:0;
 				}
 				.navLeft{ padding-top:100px; } 
 				.navButton{ float:none; width:100%; margin-bottom:40px; }
 			}
+			&.active
+			{
+				@include respond-to(mobile){
+					.logo{ top:5px;}
+				}
+			}
 		}
+		
 		.fw-banner, .midContent{ top:380px; } 
 	}
 }
@@ -260,7 +268,7 @@ $newsColor : rgb(238,79,146);
     &.active{ 
     	background-color:$mainGreenAlpha; padding:15px 0; position:fixed;
     	@include respond-to(mobile){ height:30px; }
-    	.menu{ top:2px; }
+    	.menu{ top:0px; }
     	.backToTop{ 
     		display: block; 
     		@include respond-to(mobile){ right:auto; left:0; top:15px; }
@@ -440,8 +448,8 @@ $newsColor : rgb(238,79,146);
 		}
 	}
 	&#workThirdPage{
-		.mountWidthImage{ width:100%; max-width:700px;}
-		.projectTitle{ width:60%; margin:40px auto; @include respond-fonts($fontSize2); max-width:700px;}
+		.mountWidthImage{ width:100%; max-width:850px;}
+		.projectTitle{ width:60%; margin:40px auto; @include respond-fonts($fontSize2); max-width:850px;}
 		.projectWrapper{ width:100%; max-width: 700px; margin:0 auto; }
 		.projectLeft{ 
 			width:29%; margin-right:2%; text-align: left; float:right; @include respond-fonts($fontSize5);
