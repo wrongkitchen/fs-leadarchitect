@@ -131,6 +131,7 @@ $newsColor : rgb(238,79,146);
 					@include respond-to(mobile){ left:0; text-align:left; right:auto; padding-left: 15px;}
 				}
 				&.icon-11b-left{ top:80px; right:0; text-align: right; padding-top:10px; padding-right:15px; }
+
 				&.icon-10b-right, &.icon-11b-left{
 					@include respond-to(mobile){ top:65%; border:none; font-size:25px; }
 				}
