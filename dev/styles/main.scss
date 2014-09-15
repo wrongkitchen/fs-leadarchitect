@@ -140,7 +140,7 @@ $newsColor : rgb(238,79,146);
 				height:auto; padding:20px 0px; @include respond-fonts($fontSize2);min-height:105px; margin: auto;
 				.title{ text-align: center; }
 				.subTitle{ 
-					@include respond-fonts($fontSize3); max-width:700px; text-align: center; margin:10px auto 20px auto; 
+					@include respond-fonts($fontSize3); max-width:850px; text-align: center; margin:10px auto 20px auto; 
 					@include respond-to(mobile){ max-width: 60%; margin:0px auto; }
 					&#workTypeDesc{ /*max-width: 510px;*/ }
 					.small{ @include respond-fonts($fontSize4); }
@@ -452,12 +452,12 @@ $newsColor : rgb(238,79,146);
 	&#workThirdPage{
 		.mountWidthImage{ width:100%; max-width:850px;}
 		.projectTitle{ width:60%; margin:40px auto; @include respond-fonts($fontSize2); max-width:850px;}
-		.projectWrapper{ width:100%; max-width: 700px; margin:0 auto; }
+		.projectWrapper{ width:100%; max-width: 850px; margin:0 auto; }
 		.projectLeft{ 
-			width:29%; margin-right:2%; text-align: left; float:right; @include respond-fonts($fontSize5);
+			width:27%; margin-right:2%; margin-left:2%; text-align: left; float:right; @include respond-fonts($fontSize5);
 			.txt{ padding-right:10%; }
 		}
-		.projectRight{ width:69%; float:right; @include respond-fonts($fontSize4); text-align: left; }
+		.projectRight{ width:67%; margin-right:2%;  float:right; @include respond-fonts($fontSize4); text-align: left; }
 		.projectLeft, .projectRight{ 
 			border-top:1px solid #e38025; padding:40px 0; 
 			ul{ padding-left:30px; margin-top:20px; }
